@@ -24,6 +24,7 @@
         <dcterms:creator>Oscar Corcho</dcterms:creator>
         <dcterms:creator>Socorro Bernardos</dcterms:creator>
         <dcterms:created>2026-05-05</dcterms:created>
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-05-05</dcterms:issued>
         <dcterms:description xml:lang="es">The Agenda ontology represents the agenda of cultural, sporting and social events that take place in the municipality.</dcterms:description>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <dcterms:title xml:lang="es">Vocabulario para la representación de la agenda cultural, deportiva y social de un municipio</dcterms:title>
