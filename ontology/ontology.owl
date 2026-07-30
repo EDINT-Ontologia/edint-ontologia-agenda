@@ -18,14 +18,15 @@
      xmlns:edintagenda="http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#">
     <owl:Ontology rdf:about="http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda">
         <owl:versionIRI rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda/0.1.0"/>
-        <dc:creator>Daniel Doña</dc:creator>
-        <dc:creator>Edna Ruckhaus</dc:creator>
-        <dc:creator>Lucía Sánchez</dc:creator>
-        <dc:creator>Oscar Corcho</dc:creator>
-        <dc:creator>Socorro Bernardos</dc:creator>
+        <dcterms:creator>Daniel Doña</dcterms:creator>
+        <dcterms:creator>Edna Ruckhaus</dcterms:creator>
+        <dcterms:creator>Lucía Sánchez</dcterms:creator>
+        <dcterms:creator>Oscar Corcho</dcterms:creator>
+        <dcterms:creator>Socorro Bernardos</dcterms:creator>
         <dcterms:created>2026-05-05</dcterms:created>
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-05-05</dcterms:issued>
         <dcterms:description xml:lang="es">The Agenda ontology represents the agenda of cultural, sporting and social events that take place in the municipality.</dcterms:description>
-        <dcterms:title rdf:resource="https://creativecommons.org/licenses/by/4.0"/>
+        <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <dcterms:title xml:lang="es">Vocabulario para la representación de la agenda cultural, deportiva y social de un municipio</dcterms:title>
         <dcterms:title xml:lang="en">Vocabulary for the representation of the cultural, sporting and social agenda of a municipality</dcterms:title>
         <vann:preferredNamespacePrefix>esagenda</vann:preferredNamespacePrefix>
