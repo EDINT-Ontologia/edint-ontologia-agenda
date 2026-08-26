@@ -2,7 +2,7 @@
   "@id" : "_:genid1",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/AttendanceMode"
+    "@id" : "https://edint.es/kos/AttendanceMode"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -11,7 +11,7 @@
   "@id" : "_:genid2",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/EventStatus"
+    "@id" : "https://edint.es/kos/EventStatus"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -20,14 +20,38 @@
   "@id" : "_:genid3",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/EventType"
+    "@id" : "https://edint.es/kos/EventType"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Autonomia"
+    }, {
+      "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Barrio"
+    }, {
+      "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Ciudad"
+    }, {
+      "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Distrito"
+    }, {
+      "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio"
+    }, {
+      "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Provincia"
+    } ]
+  } ]
+}, {
   "@id" : "http://purl.org/dc/elements/1.1/contributor",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/created",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/dc/terms/title"
+  } ]
 }, {
   "@id" : "http://purl.org/dc/elements/1.1/creator",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
@@ -39,6 +63,12 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/elements/1.1/identifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/created",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/creator",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/description",
@@ -66,6 +96,9 @@
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
+}, {
+  "@id" : "http://purl.org/dc/terms/issued",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/license",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
@@ -130,312 +163,164 @@
     "@value" : "Postal address"
   } ]
 }, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
-  "http://purl.org/dc/elements/1.1/creator" : [ {
-    "@value" : "Daniel Doña"
-  }, {
-    "@value" : "Edna Ruckhaus"
-  }, {
-    "@value" : "Lucía Sánchez"
-  }, {
-    "@value" : "Oscar Corcho"
-  }, {
-    "@value" : "Socorro Bernardos"
-  } ],
-  "http://purl.org/dc/terms/description" : [ {
-    "@language" : "es",
-    "@value" : "The Agenda ontology represents the agenda of cultural, sporting and social events that take place in the municipality."
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
-    "@id" : "https://creativecommons.org/licenses/by/4.0"
-  }, {
-    "@language" : "es",
-    "@value" : "Vocabulario para la representación de la agenda cultural, deportiva y social de un municipio"
-  }, {
-    "@language" : "en",
-    "@value" : "Vocabulary for the representation of the cultural, sporting and social agenda of a municipality"
-  } ],
-  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
-    "@value" : "esagenda"
-  } ],
-  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
-    "@value" : "http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda"
-  } ],
-  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda/0.1.0"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#CityEvent",
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Autonomia",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@value" : "2014-03-28"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "An event that will take place in a city."
-  }, {
     "@language" : "es",
-    "@value" : "Evento que tendrá lugar en una ciudad."
+    "@value" : "Comunidad Autónoma o Ciudad Autónoma"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Evento"
+    "@language" : "es",
+    "@value" : "Autonomía"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.opengis.net/ont/geosparql#Feature"
-  }, {
-    "@id" : "https://schema.org/Event"
   } ]
 }, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#attendanceMode",
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Barrio",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@value" : "2014-03-28"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Un barrio es cada una de las partes en que se dividen los pueblos grandes o sus distritos [fuente: Diccionario de la Real Academia (DRAE) 2011]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Barrio"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Ciudad",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@language" : "es",
+    "@value" : "2014-04-15"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Una ciudad es un área urbana en la que predominan fundamentalmente la industria y los servicios [fuente: Wikipedia]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Ciudad"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio"
+  }, {
+    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Distrito",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@value" : "2014-03-28"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Un distrito es cada una de las demarcaciones en que se subdivide un territorio o una población para distribuir y ordenar el ejercicio de los derechos civiles y políticos, o de las funciones públicas, o de los servicios administrativos [fuente: Diccionario de la Real Academia (DRAE) 2011]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Distrito"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@value" : "2014-03-28"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Un Municipio es el ente local definido en el artículo 140 de la Constitución española y la entidad básica de la organización territorial del Estado según el artículo 1 de la Ley 7/1985, de 2 de abril, Reguladora de las Bases del Régimen Local. Tiene personalidad jurídica y plena capacidad para el cumplimiento de sus fines. La delimitación territorial de Municipio está recogida del REgistro Central de Cartografía del IGN.\nSu nombre, que se especifica con la propiedad dct:title, es el proporcionado por el Registro de Entidades Locales del Ministerio de Política Territorial, en http://www.ine.es/nomen2/index.do"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/derecho/vocabulario"
+  }, {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"
+  }, {
+    "@id" : "http://www.ign.es/ign/resources/acercaDe/tablon/ModeloDireccionesAGE.pdf‎"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Municipio"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://purl.org/derecho/vocabulario#Municipio"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Provincia",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@value" : "2014-03-28"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Cada una de las grandes divisiones de un territorio o Estado, sujeta por lo común a una autoridad administrativa [fuente: Diccionario de la lengua española (DRAE) 2011]"
+  }, {
+    "@language" : "es",
+    "@value" : "Entidad local con personalidad jurídica propia, determinada por la agrupación de Municipios y división territorial para el cumplimiento de las actividades del Estado. La delimitación territorial de Provincia está recogida en el Registro Central de Cartografía del IGN [fuente: Modelo de Direcciones de la Administración General del Estado v.2]\nSu identificador, que se especifica con la propiedad dct:identifier, es el proporcionado por el INE en http://www.ine.es/daco/daco42/codmun/codmun09/09codmun.xls\nSu nombre, que se especifica con la propiedad dct:title, es el proporcionado por el Registro de Entidades Locales del Ministerio de Política Territorial, en http://www.ine.es/nomen2/index.do"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/derecho/vocabulario"
+  }, {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"
+  }, {
+    "@id" : "http://www.ign.es/ign/resources/acercaDe/tablon/ModeloDireccionesAGE.pdf‎"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Provincia"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://purl.org/derecho/vocabulario#Provincia"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#municipio",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Attendance mode, for example, in person, online."
-  }, {
-    "@language" : "es",
-    "@value" : "Modalidad de asistencia, por ejemplo, presencial, en línea."
+  "http://purl.org/dc/terms/issued" : [ {
+    "@value" : "2014-03-28"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#CityEvent"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "attendance mode"
-  }, {
-    "@language" : "es",
-    "@value" : "modalidad de asistencia"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid1"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#documentation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
-    "@value" : "Documentación asociada a un evento"
-  }, {
-    "@language" : "en",
-    "@value" : "Documentation associated with an event"
+    "@value" : "Municipio al que pertenece un fenómeno geográfico o una entidad administrativa"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#CityEvent"
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
-    "@value" : "documentacion"
-  }, {
-    "@language" : "en",
-    "@value" : "documentation"
+    "@value" : "pertenece al municipio"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://schema.org/DigitalDocument"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#eventStatus",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Estado de un evento, por ejemplo, activo o cancelado."
-  }, {
-    "@language" : "en",
-    "@value" : "Status of an event, for example, active or cancelled."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#CityEvent"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "estado del evento"
-  }, {
-    "@language" : "en",
-    "@value" : "event status"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid2"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#eventType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Tipo de evento que tendrá lugar."
-  }, {
-    "@language" : "en",
-    "@value" : "Type of event to be held."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#CityEvent"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "tipo de evento"
-  }, {
-    "@language" : "en",
-    "@value" : "type of event"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid3"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#interior",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Indica si un evento tiene lugar en un sitio cerrado."
-  }, {
-    "@language" : "en",
-    "@value" : "Indicates whether an event is taking place in an enclosed location"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#CityEvent"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "inside"
-  }, {
-    "@language" : "es",
-    "@value" : "interior"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#organizedBy",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Relación entre el evento y la organización que lo gestiona."
-  }, {
-    "@language" : "en",
-    "@value" : "Relationship between the event and the organization that manages it."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#CityEvent"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "organizadoPor"
-  }, {
-    "@language" : "en",
-    "@value" : "organizedBy"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://schema.org/Organization"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#price",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "El precio de un evento."
-  }, {
-    "@value" : "The price of an event."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#CityEvent"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "precio"
-  }, {
-    "@value" : "price"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#schedule",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "El cronograma de un evento que especifica  el horario de cada día."
-  }, {
-    "@language" : "en",
-    "@value" : "The schedule of an event scpecifying the hours each day."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#CityEvent"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "horario"
-  }, {
-    "@language" : "en",
-    "@value" : "schedule"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#takesPlace",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "El lugar en donde se realiza el evento."
-  }, {
-    "@language" : "es",
-    "@value" : "The venue where the event takes place."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#CityEvent"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "takes place"
-  }, {
-    "@language" : "es",
-    "@value" : "tiene lugar"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismos-infraestructuras/infraestructura#Facility"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#workPerformed",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A work performed in some event, for example a play performed in a theater event."
-  }, {
-    "@language" : "es",
-    "@value" : "Una obra representada en algún evento, por ejemplo, una obra de teatro representada en un evento teatral."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://schema.org/Event"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "obra presentada"
-  }, {
-    "@language" : "en",
-    "@value" : "work performed"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://schema.org/CreativeWork"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructura/equipamiento-municipal#nombre",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Name of the equipment of the municipality where the event will take place."
-  }, {
-    "@language" : "es",
-    "@value" : "Nombre del equipamiento del ayuntamiento donde tendrá lugar el evento."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "name"
-  }, {
-    "@language" : "es",
-    "@value" : "nombre"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio"
   } ]
 }, {
   "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal",
@@ -458,41 +343,6 @@
     "@id" : "http://schema.org/PostalAddress"
   } ]
 }, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismos-infraestructuras/infraestructura#Facility",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Hace referencia a edificios de servicios (públicos o privados), zonas de ocio, zonas comerciales o cualquier otro elemento  que afecte directamente a la movilidad, actuando como un foco de atracción de personas o vehículos."
-  }, {
-    "@language" : "en",
-    "@value" : "It refers to service buildings (public or private), leisure areas, commercial areas or any other element that directly affects mobility, acting as a focus of attraction for persons or vehicles."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Equipamiento"
-  }, {
-    "@language" : "en",
-    "@value" : "Facility"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/AttendanceMode",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/EventStatus",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/EventType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
-  } ]
-}, {
   "@id" : "http://www.opengis.net/ont/geosparql#Feature",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/contributor" : [ {
@@ -504,10 +354,6 @@
   "http://purl.org/dc/elements/1.1/date" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2011-06-16"
-  } ],
-  "http://purl.org/dc/elements/1.1/description" : [ {
-    "@language" : "en",
-    "@value" : "\n      This class represents the top-level feature type. This class is \n      equivalent to GFI_Feature defined in ISO 19156:2011, and it is \n      superclass of all feature types.\n    "
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -529,14 +375,6 @@
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "http://www.opengis.net/ont/geosparql#Geometry"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "\n      This class represents the top-level feature type. This class is \n      equivalent to GFI_Feature defined in ISO 19156:2011, and it is \n      superclass of all feature types.\n    "
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "en",
-    "@value" : "Feature"
   } ]
 }, {
   "@id" : "http://www.opengis.net/ont/geosparql#Geometry",
@@ -550,10 +388,6 @@
   "http://purl.org/dc/elements/1.1/date" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2011-06-16"
-  } ],
-  "http://purl.org/dc/elements/1.1/description" : [ {
-    "@language" : "en",
-    "@value" : "\n      The class represents the top-level geometry type. This class is \n      equivalent to the UML class GM_Object defined in ISO 19107, and \n      it is superclass of all geometry types.\n    "
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -572,14 +406,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.opengis.net/ont/geosparql#SpatialObject"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "\n      The class represents the top-level geometry type. This class is \n      equivalent to the UML class GM_Object defined in ISO 19107, and \n      it is superclass of all geometry types.\n    "
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "en",
-    "@value" : "Geometry"
   } ]
 }, {
   "@id" : "http://www.opengis.net/ont/geosparql#SpatialObject",
@@ -593,10 +419,6 @@
   "http://purl.org/dc/elements/1.1/date" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2011-06-16"
-  } ],
-  "http://purl.org/dc/elements/1.1/description" : [ {
-    "@language" : "en",
-    "@value" : "\n      The class spatial-object represents everything that can have \n      a spatial representation. It is superclass of feature and geometry.\n    "
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -612,14 +434,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "SpatialObject"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "\n      The class spatial-object represents everything that can have \n      a spatial representation. It is superclass of feature and geometry.\n    "
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "en",
-    "@value" : "SpatialObject"
   } ]
 }, {
   "@id" : "http://www.opengis.net/ont/geosparql#hasGeometry",
@@ -633,10 +447,6 @@
   "http://purl.org/dc/elements/1.1/date" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2011-06-16"
-  } ],
-  "http://purl.org/dc/elements/1.1/description" : [ {
-    "@language" : "en",
-    "@value" : "\n      A spatial representation for a given feature.\n    "
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -656,14 +466,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.opengis.net/ont/geosparql#Geometry"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "\n      A spatial representation for a given feature.\n    "
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "en",
-    "@value" : "hasGeometry"
   } ]
 }, {
   "@id" : "http://www.w3.org/2001/XMLSchema#date",
@@ -713,6 +515,364 @@
 }, {
   "@id" : "http://www.w3.org/2004/02/skos/core#prefLabel",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://edint.es/def/agenda",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2026-05-05"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Daniel Doña"
+  }, {
+    "@value" : "Edna Ruckhaus"
+  }, {
+    "@value" : "Lucía Sánchez"
+  }, {
+    "@value" : "Socorro Bernardos"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "es",
+    "@value" : "The Agenda ontology represents the agenda of cultural, sporting and social events that take place in the municipality."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2026-05-05"
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "https://creativecommons.org/licenses/by/4.0/"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "es",
+    "@value" : "Vocabulario para la representación de la agenda cultural, deportiva y social de un municipio"
+  }, {
+    "@language" : "en",
+    "@value" : "Vocabulary for the representation of the cultural, sporting and social agenda of a municipality"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "edintagenda"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@value" : "https://edint.es/def/agenda#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "https://edint.es/def/agenda"
+  } ],
+  "http://www.w3.org/2002/07/owl#priorVersion" : [ {
+    "@id" : "https://github.com/EDINT-Ontologia/edint-ontologia-agenda/releases/tag/v0.1.0"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "https://edint.es/def/agenda"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "0.1.1"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/agenda#CityEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An event that will take place in a city."
+  }, {
+    "@language" : "es",
+    "@value" : "Evento que tendrá lugar en una ciudad."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Evento"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+  }, {
+    "@id" : "https://schema.org/Event"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/agenda#attendanceMode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Attendance mode, for example, in person, online."
+  }, {
+    "@language" : "es",
+    "@value" : "Modalidad de asistencia, por ejemplo, presencial, en línea."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/agenda#CityEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "attendance mode"
+  }, {
+    "@language" : "es",
+    "@value" : "modalidad de asistencia"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid1"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/agenda#documentation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Documentación asociada a un evento"
+  }, {
+    "@language" : "en",
+    "@value" : "Documentation associated with an event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/agenda#CityEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "documentacion"
+  }, {
+    "@language" : "en",
+    "@value" : "documentation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://schema.org/DigitalDocument"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/agenda#eventStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Estado de un evento, por ejemplo, activo o cancelado."
+  }, {
+    "@language" : "en",
+    "@value" : "Status of an event, for example, active or cancelled."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/agenda#CityEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "estado del evento"
+  }, {
+    "@language" : "en",
+    "@value" : "event status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid2"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/agenda#eventType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Tipo de evento que tendrá lugar."
+  }, {
+    "@language" : "en",
+    "@value" : "Type of event to be held."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/agenda#CityEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "tipo de evento"
+  }, {
+    "@language" : "en",
+    "@value" : "type of event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid3"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/agenda#interior",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica si un evento tiene lugar en un sitio cerrado."
+  }, {
+    "@language" : "en",
+    "@value" : "Indicates whether an event is taking place in an enclosed location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/agenda#CityEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "inside"
+  }, {
+    "@language" : "es",
+    "@value" : "interior"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/agenda#isHeldIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relación entre el Evento y la entidad administrativa en donde se celebra, por ejemplo el Barrio o el Distrito."
+  }, {
+    "@language" : "en",
+    "@value" : "Relationship between the Event and the administrative entity where it is held in, for example the Neighborhood or the District."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/agenda#CityEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is held in"
+  }, {
+    "@language" : "es",
+    "@value" : "se celebra en"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid4"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/agenda#organizedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relación entre el evento y la organización que lo gestiona."
+  }, {
+    "@language" : "en",
+    "@value" : "Relationship between the event and the organization that manages it."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/agenda#CityEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "organizadoPor"
+  }, {
+    "@language" : "en",
+    "@value" : "organizedBy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://schema.org/Organization"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/agenda#price",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "El precio de un evento."
+  }, {
+    "@value" : "The price of an event."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/agenda#CityEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "precio"
+  }, {
+    "@value" : "price"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/agenda#schedule",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "El cronograma de un evento que especifica  el horario de cada día."
+  }, {
+    "@language" : "en",
+    "@value" : "The schedule of an event scpecifying the hours each day."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/agenda#CityEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "horario"
+  }, {
+    "@language" : "en",
+    "@value" : "schedule"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/agenda#takesPlaceIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "El lugar en donde se realiza el evento."
+  }, {
+    "@language" : "es",
+    "@value" : "The venue where the event takes place."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/agenda#CityEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "takes place in"
+  }, {
+    "@language" : "es",
+    "@value" : "tiene lugar en"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://edint.es/def/infraestructura#Facility"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/agenda#workPerformed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A work performed in some event, for example a play performed in a theater event."
+  }, {
+    "@language" : "es",
+    "@value" : "Una obra representada en algún evento, por ejemplo, una obra de teatro representada en un evento teatral."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://schema.org/Event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "obra presentada"
+  }, {
+    "@language" : "en",
+    "@value" : "work performed"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://schema.org/CreativeWork"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/infraestructura#Facility",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Hace referencia a edificios de servicios (públicos o privados), zonas de ocio, zonas comerciales o cualquier otro elemento  que afecte directamente a la movilidad, actuando como un foco de atracción de personas o vehículos."
+  }, {
+    "@language" : "en",
+    "@value" : "It refers to service buildings (public or private), leisure areas, commercial areas or any other element that directly affects mobility, acting as a focus of attraction for persons or vehicles."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Equipamiento"
+  }, {
+    "@language" : "en",
+    "@value" : "Facility"
+  } ]
+}, {
+  "@id" : "https://edint.es/kos/AttendanceMode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+  } ]
+}, {
+  "@id" : "https://edint.es/kos/EventStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+  } ]
+}, {
+  "@id" : "https://edint.es/kos/EventType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+  } ]
 }, {
   "@id" : "https://schema.org/CreativeWork",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -774,7 +934,7 @@
     "@value" : "Physical address of the item."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#CityEvent"
+    "@id" : "https://edint.es/def/agenda#CityEvent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -952,7 +1112,7 @@
     "@value" : "Una bandera para señalar que el artículo, evento o lugar es accesible de forma gratuita."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#CityEvent"
+    "@id" : "https://edint.es/def/agenda#CityEvent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
