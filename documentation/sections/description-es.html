@@ -1,10 +1,14 @@
 <h2 id="desc" class="list">Agenda: Descripci&oacute;n <span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h2>
-<span class="markdown">En la Figura 1 se muestra el modelo conceptual de la ontología con sus clases y relaciones (propiedades de objeto).</p>
+<span class="markdown">
+<p>En la Figura 1 se muestra el modelo conceptual de la ontología con sus clases y relaciones (propiedades de objeto).</p>
 <p><center><img src="images/diagrama-conceptual.png"/><figcaption>
 Figura 1. Modelo conceptual de la ontología</figcaption></center></p></span>
+<p>El vocabulario reutiliza términos del vocabulario <a href="https://schema.org/">schema.org</a> para la representación de los <a href="#https://schema.org/Event">eventos</a> y la <a href="#https://schema.org/DigitalDocument">documentación asociada</a>. También se reutiliza el vocabulario de <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal">Dirección Postal</a> y el vocabulario de <a href="http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio">Territorio</a> que contiene las divisiones administrativas para representar el ámbito de un evento, por ejemplo un <a href="#http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Distrito">distrito</a> o un <a href="#http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Barrio">barrio</a>.
 
+El concepto principal de este vocabulario es el de un <a href="#CityEvent">evento que tiene lugar en una ciudad</a>. El lugar en donde <a href="#takesPlaceIn">se realiza el evento</a> puede ser un <a href="#https://edint.es/def/infraestructura#Facility">equipamiento de la ciudad</a>  tal como el edificio del ayuntamiento, un centro cultural, etc. Un evento tiene una dirección que puede estar normalizada utilizando las propiedades de la clase  <a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal">esdir:DireccionPostal</a>. Adicionalmente, en este vocabulario se han utilizado varios esquemas de conceptos SKOS para representar el tipo de evento, la modalidad de asistencia (presencial, en línea o mixto) o el estado de un evento (programado, cancelado, aplazado o reprogramado).
+</p>
 <pre><textarea style="resize:none" readonly id="code2" name="code" rows="25" cols="100">
-&lt;http://vocab.linkeddata.es/datosabiertos/recurso/city-event/madrid-deporte-50292978&gt;
+&lt;https://example.org/recurso/city-event/madrid-deporte-50292978&gt;
     a edintagenda:CityEvent ;
     dct:identifier "50292978" ;
     rdfs:label "IV Cross escolar de Barajas"@es ;
@@ -15,25 +19,25 @@ Figura 1. Modelo conceptual de la ontología</figcaption></center></p></span>
     edintagenda:attendanceMode edintattendancemode:InPerson ;
     edintagenda:eventType edinteventtype:ActividadesDeportivas ;
     edintagenda:schedule "09:00"@es ;
-    edintagenda:documentation &lt;http://vocab.linkeddata.es/datosabiertos/recurso/documento-digital/madrid-deporte-50292978&gt; ;
-    edintagenda:takesPlaceIn &lt;http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento/parque-juan-carlos-i&gt; ;
-    edintagenda:organizedBy &lt;http://vocab.linkeddata.es/datosabiertos/recurso/organizacion/ayuntamiento-madrid&gt; ;
-    schema:address &lt;http://vocab.linkeddata.es/datosabiertos/recurso/direccion-postal/parque-juan-carlos-i&gt; .
+    edintagenda:documentation &lt;https://example.org/recurso/documento-digital/madrid-deporte-50292978&gt; ;
+    edintagenda:takesPlaceIn &lt;https://example.org/recurso/equipamiento/parque-juan-carlos-i&gt; ;
+    edintagenda:organizedBy &lt;https://example.org/recurso/organizacion/ayuntamiento-madrid&gt; ;
+    schema:address &lt;https://example.org/recurso/direccion-postal/parque-juan-carlos-i&gt; .
 
-&lt;http://vocab.linkeddata.es/datosabiertos/recurso/documento-digital/madrid-deporte-50292978&gt;
+&lt;https://example.org/recurso/documento-digital/madrid-deporte-50292978&gt;
     a schema:DigitalDocument ;
     dct:identifier "50292978" ;
     rdfs:label "Página del evento IV Cross escolar de Barajas"@es ;
     schema:url &lt;http://www.madrid.es/sites/v/index.jsp?vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD&amp;vgnextoid=00c0ae46863dd910VgnVCM200000f921e388RCRD&gt; ;
     schema:encodingFormat "text/html" .
 
-&lt;http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento/parque-juan-carlos-i&gt;
+&lt;https://example.org/recurso/equipamiento/parque-juan-carlos-i&gt;
     a edintagenda:Facility, gsp:Feature ;
     rdfs:label "Parque Juan Carlos I"@es ;
     schema:url &lt;http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&amp;vgnextoid=8d9a78a0dea9e210VgnVCM1000000b205a0aRCRD&gt; ;
-    gsp:hasGeometry &lt;http://vocab.linkeddata.es/datosabiertos/recurso/geometria/parque-juan-carlos-i&gt; .
+    gsp:hasGeometry &lt;https://example.org/recurso/geometria/parque-juan-carlos-i&gt; .
 
-&lt;http://vocab.linkeddata.es/datosabiertos/recurso/direccion-postal/parque-juan-carlos-i&gt;
+&lt;https://example.org/recurso/direccion-postal/parque-juan-carlos-i&gt;
     a schema:PostalAddress ;
     schema:streetAddress "GLORIETA S.A.R. DON JUAN DE BORBON Y BATTEMBERG, 5 5"@es ;
     schema:addressLocality "Madrid"@es ;
@@ -41,7 +45,7 @@ Figura 1. Modelo conceptual de la ontología</figcaption></center></p></span>
     schema:postalCode "28042" ;
     schema:addressCountry "ES" .
 
-&lt;http://vocab.linkeddata.es/datosabiertos/recurso/geometria/parque-juan-carlos-i&gt;
+&lt;https://example.org/recurso/geometria/parque-juan-carlos-i&gt;
     a gsp:Geometry ;
     gsp:asWKT "POINT(-3.614888870630359 40.45999848510341)"^^gsp:wktLiteral .
 
