@@ -1,4 +1,4 @@
-# Ontología de Agenda (Agenda ontology)
+# Ontología EDINT de Agenda de Eventos
 
 La ontología de Agenda representa los eventos culturales, deportivos y sociales que se llevan a cabo en una ciudad.
 
