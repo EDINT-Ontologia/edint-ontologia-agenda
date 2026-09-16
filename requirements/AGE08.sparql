@@ -1,7 +1,7 @@
 
 # AGE08: ¿Qué eventos están dirigidos a un público adulto?
 
-PREFIX edintagenda: <http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#>
+PREFIX edintagenda: <https://edint.es/def/agenda#>
 PREFIX schema: <https://schema.org/>
 
 SELECT ?event ?name
