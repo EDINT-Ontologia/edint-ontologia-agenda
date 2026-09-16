@@ -15,7 +15,8 @@
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:edintinf="https://edint.es/def/infraestructura#"
      xmlns:edintkos="https://edint.es/kos/"
-     xmlns:edintagenda="https://edint.es/def/agenda#">
+     xmlns:edintagenda="https://edint.es/def/agenda#"
+     xmlns:bibo="http://purl.org/ontology/bibo/">
     <owl:Ontology rdf:about="https://edint.es/def/agenda">
         <owl:versionIRI rdf:resource="https://edint.es/def/agenda"/>
         <dcterms:created>2026-05-05</dcterms:created>
@@ -33,7 +34,12 @@
         <rdfs:comment>https://edint.es/def/agenda</rdfs:comment>
         <owl:priorVersion rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-agenda/releases/tag/v0.1.0"/>
         <owl:versionInfo>0.1.1</owl:versionInfo>
-    </owl:Ontology>
+        <dcterms:publisher rdf:resource="https://www.femp.es/"/>
+    <dcterms:bibliographicCitation xml:lang="es">Ontología para la representación de la agenda de eventos. EDINT. Revision: v0.1.1.</dcterms:bibliographicCitation>
+    <schema:creativeWorkStatus xml:lang="en">Ontology Specification</schema:creativeWorkStatus>
+    <dcterms:abstract xml:lang="es">El propósito de esta ontología es el de proporcionar un vocabulario común para la representación de todos los conceptos relacionados con la agenda de eventos culturales, deportivos y sociales de un municipio.</dcterms:abstract>
+    <dcterms:abstract xml:lang="en">El propósito de esta ontología es el de proporcionar un vocabulario común para la representación de todos los conceptos relacionados con la agenda de eventos culturales, deportivos y sociales de un municipio.</dcterms:abstract>
+</owl:Ontology>
     
 
 
