@@ -9,7 +9,7 @@ El propósito de esta ontología es el de proporcionar un vocabulario común par
 
 # Prefijo y espacio de nombres de la ontología (Prefix and namespace of the ontology)
 
-El prefijo de la ontología es edintagenda y se encuentra publicada en el espacio de nombres [http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#](http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#) 
+El prefijo de la ontología es edintagenda y se encuentra publicada en el espacio de nombres [https://edint.es/def/agenda#](https://edint.es/def/agenda#) 
 
 # Modelo conceptual de la ontología (Ontology conceptual model)
 
