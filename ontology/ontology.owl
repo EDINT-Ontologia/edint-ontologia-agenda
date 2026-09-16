@@ -17,7 +17,7 @@
      xmlns:edintkos="https://edint.es/kos/"
      xmlns:edintagenda="https://edint.es/def/agenda#"
      xmlns:bibo="http://purl.org/ontology/bibo/" xmlns:foaf="http://xmlns.com/foaf/0.1/">    <owl:Ontology rdf:about="https://edint.es/def/agenda">
-        <owl:versionIRI rdf:resource="https://edint.es/def/agenda"/>
+        <owl:versionIRI rdf:resource="https://edint.es/def/agenda/0.1.1"/>
         <dcterms:created>2026-05-05</dcterms:created>
         <dcterms:creator rdf:parseType="Resource">
             <foaf:name>Daniel Doña</foaf:name>
