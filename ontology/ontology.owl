@@ -45,7 +45,11 @@
         <rdfs:comment>https://edint.es/def/agenda</rdfs:comment>
         <owl:priorVersion rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-agenda/releases/tag/v0.1.0"/>
         <owl:versionInfo>0.1.1</owl:versionInfo>
-        <dcterms:publisher rdf:resource="https://www.femp.es/"/>
+        <dcterms:publisher rdf:parseType="Resource">
+            <foaf:name>FEMP</foaf:name>
+            <foaf:homepage rdf:resource="https://www.femp.es/"/>
+            <schema:affiliation>Federación Española de Municipios y Provincias</schema:affiliation>
+        </dcterms:publisher>
     <dcterms:bibliographicCitation xml:lang="es">Ontología EDINT de Agenda de Eventos. EDINT. Revision: v0.1.1.</dcterms:bibliographicCitation>
     <schema:creativeWorkStatus xml:lang="en">Ontology Specification</schema:creativeWorkStatus>
     <dcterms:abstract xml:lang="es">El propósito de esta ontología es el de proporcionar un vocabulario común para la representación de todos los conceptos relacionados con la agenda de eventos culturales, deportivos y sociales de un municipio.</dcterms:abstract>
