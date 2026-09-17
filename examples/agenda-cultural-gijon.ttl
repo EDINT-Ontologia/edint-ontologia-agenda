@@ -9,6 +9,7 @@
 @prefix cc:                        <http://creativecommons.org/ns#> .
 
 @prefix edintagenda:               <https://edint.es/def/agenda#> .
+@prefix edintinf:                  <https://edint.es/def/infraestructura#> .
 @prefix edintkos:                  <https://edint.es/kos/> .
 @prefix edinteventstatus:          <https://edint.es/kos/EventStatus/> .
 @prefix edintattendancemode:       <https://edint.es/kos/AttendanceMode/> .
@@ -40,7 +41,7 @@
     dct:source <https://www.gijon.es> .
 
 <http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento/centro-municipal-integrado-ateneo-de-la-calzada>
-    a edintagenda:Facility ;
+    a edintinf:Facility ;
     rdfs:label "Centro Municipal Integrado Ateneo de La Calzada"@es .
 
 <http://vocab.linkeddata.es/datosabiertos/recurso/direccion-postal/centro-municipal-integrado-ateneo-de-la-calzada>

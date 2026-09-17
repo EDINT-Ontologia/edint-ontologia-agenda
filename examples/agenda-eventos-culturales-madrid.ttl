@@ -9,6 +9,7 @@
 @prefix cc:                        <http://creativecommons.org/ns#> .
 
 @prefix edintagenda:               <https://edint.es/def/agenda#> .
+@prefix edintinf:                  <https://edint.es/def/infraestructura#> .
 @prefix edintkos:                  <https://edint.es/kos/> .
 @prefix edinteventstatus:          <https://edint.es/kos/EventStatus/> .
 @prefix edintattendancemode:       <https://edint.es/kos/AttendanceMode/> .
@@ -40,7 +41,7 @@
     dct:source <https://datos.madrid.es> .
 
 <http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento/jardin-del-bulevar-de-pena-gorbea>
-    a edintagenda:Facility, gsp:Feature ;
+    a edintinf:Facility, gsp:Feature ;
     rdfs:label "Jardín del Bulevar de Peña Gorbea"@es ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=1aaf38317117e210VgnVCM1000000b205a0aRCRD> ;
     gsp:hasGeometry <http://vocab.linkeddata.es/datosabiertos/recurso/geometria/jardin-del-bulevar-de-pena-gorbea> .
