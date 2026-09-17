@@ -1,5 +1,9 @@
 # Ontología de Agenda (Agenda ontology)
 
+[![Documentación](https://img.shields.io/badge/documentaci%C3%B3n-edint.es-blue)](https://edint.es/def/agenda)
+![Prefijo](https://img.shields.io/badge/prefijo-edintagenda-informational)
+[![Licencia](https://img.shields.io/badge/licencia-CC%20BY--SA%204.0-lightgrey)](LICENSE)
+
 La ontología de Agenda representa los eventos culturales, deportivos y sociales que se llevan a cabo en una ciudad.
 
 
