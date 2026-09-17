@@ -194,9 +194,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
             </ul>
         </div>
         <div class="main-content">
-    <section class="file-card" id="AGE01_sparql"><div class="file-header">AGE01.sparql</div><div class="query-block"><span class="query-title">AGE01: ¿Qué eventos están registrados en la agenda?</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintagenda</span><span class="p">:</span> <span class="nl">&lt;http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#&gt;</span>
+    <section class="file-card" id="AGE01_sparql"><div class="file-header">AGE01.sparql</div><div class="query-block"><span class="query-title">AGE01: ¿Qué eventos están registrados en la agenda?</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintagenda</span><span class="p">:</span> <span class="nl">&lt;https://edint.es/def/agenda#&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">schema</span><span class="p">:</span> <span class="nl">&lt;https://schema.org/&gt;</span>
-<span class="k">PREFIX</span> <span class="nn">edintinf</span><span class="p">:</span> <span class="nl">&lt;http://vocab.linkeddata.es/datosabiertos/def/urbanismos-infraestructuras/infraestructura#&gt;</span>
+<span class="k">PREFIX</span> <span class="nn">edintinf</span><span class="p">:</span> <span class="nl">&lt;https://edint.es/def/infraestructura#&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">skos</span><span class="p">:</span> <span class="nl">&lt;http://www.w3.org/2004/02/skos/core#&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">gsp</span><span class="p">:</span> <span class="nl">&lt;http://www.opengis.net/ont/geosparql#&gt;</span>
 
@@ -206,9 +206,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <span class="k">OPTIONAL</span> <span class="p">{</span> <span class="nv">?event</span> <span class="nn">schema</span><span class="p">:</span><span class="nt">name</span> <span class="nv">?name</span> <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
-</div></section><section class="file-card" id="AGE02_sparql"><div class="file-header">AGE02.sparql</div><div class="query-block"><span class="query-title">AGE02: ¿Qué eventos tienen lugar en un determinado equipamiento?</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintagenda</span><span class="p">:</span> <span class="nl">&lt;http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#&gt;</span>
+</div></section><section class="file-card" id="AGE02_sparql"><div class="file-header">AGE02.sparql</div><div class="query-block"><span class="query-title">AGE02: ¿Qué eventos tienen lugar en un determinado equipamiento?</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintagenda</span><span class="p">:</span> <span class="nl">&lt;https://edint.es/def/agenda#&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">schema</span><span class="p">:</span> <span class="nl">&lt;https://schema.org/&gt;</span>
-<span class="k">PREFIX</span> <span class="nn">edintinf</span><span class="p">:</span> <span class="nl">&lt;http://vocab.linkeddata.es/datosabiertos/def/urbanismos-infraestructuras/infraestructura#&gt;</span>
+<span class="k">PREFIX</span> <span class="nn">edintinf</span><span class="p">:</span> <span class="nl">&lt;https://edint.es/def/infraestructura#&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">skos</span><span class="p">:</span> <span class="nl">&lt;http://www.w3.org/2004/02/skos/core#&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">gsp</span><span class="p">:</span> <span class="nl">&lt;http://www.opengis.net/ont/geosparql#&gt;</span>
 
@@ -218,9 +218,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
          <span class="nn">edintagenda</span><span class="p">:</span><span class="nt">takesPlace</span> <span class="err">URI_DEL_EQUIPAMIEN</span><span class="k">TO</span><span class="o">&gt;</span> <span class="p">.</span>
 <span class="p">}</span>
 </pre></div>
-</div></section><section class="file-card" id="AGE03_sparql"><div class="file-header">AGE03.sparql</div><div class="query-block"><span class="query-title">AGE03: ¿Qué eventos organiza una determinada organización?</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintagenda</span><span class="p">:</span> <span class="nl">&lt;http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#&gt;</span>
+</div></section><section class="file-card" id="AGE03_sparql"><div class="file-header">AGE03.sparql</div><div class="query-block"><span class="query-title">AGE03: ¿Qué eventos organiza una determinada organización?</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintagenda</span><span class="p">:</span> <span class="nl">&lt;https://edint.es/def/agenda#&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">schema</span><span class="p">:</span> <span class="nl">&lt;https://schema.org/&gt;</span>
-<span class="k">PREFIX</span> <span class="nn">edintinf</span><span class="p">:</span> <span class="nl">&lt;http://vocab.linkeddata.es/datosabiertos/def/urbanismos-infraestructuras/infraestructura#&gt;</span>
+<span class="k">PREFIX</span> <span class="nn">edintinf</span><span class="p">:</span> <span class="nl">&lt;https://edint.es/def/infraestructura#&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">skos</span><span class="p">:</span> <span class="nl">&lt;http://www.w3.org/2004/02/skos/core#&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">gsp</span><span class="p">:</span> <span class="nl">&lt;http://www.opengis.net/ont/geosparql#&gt;</span>
 
@@ -230,7 +230,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
          <span class="nn">edintagenda</span><span class="p">:</span><span class="nt">organizedBy</span> <span class="nv">?org</span> <span class="p">.</span>
 <span class="p">}</span>
 </pre></div>
-</div></section><section class="file-card" id="AGE04_sparql"><div class="file-header">AGE04.sparql</div><div class="query-block"><span class="query-title">AGE04: ¿Cuáles son las fechas de inicio y fin de cada próximo evento?<br>Considerando que próximo evento implica que no está cancelado y no ha terminado (su fecha de finalización es posterior o igual a la presente)</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintagenda</span><span class="p">:</span> <span class="nl">&lt;http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#&gt;</span>
+</div></section><section class="file-card" id="AGE04_sparql"><div class="file-header">AGE04.sparql</div><div class="query-block"><span class="query-title">AGE04: ¿Cuáles son las fechas de inicio y fin de cada próximo evento?<br>Considerando que próximo evento implica que no está cancelado y no ha terminado (su fecha de finalización es posterior o igual a la presente)</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintagenda</span><span class="p">:</span> <span class="nl">&lt;https://edint.es/def/agenda#&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">schema</span><span class="p">:</span> <span class="nl">&lt;https://schema.org/&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">skos</span><span class="p">:</span> <span class="nl">&lt;http://www.w3.org/2004/02/skos/core#&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">xsd</span><span class="p">:</span> <span class="nl">&lt;http://www.w3.org/2001/XMLSchema#&gt;</span>
@@ -253,7 +253,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <span class="k">FILTER</span><span class="p">(</span><span class="nn">xsd</span><span class="p">:</span><span class="nt">dateTime</span><span class="p">(</span><span class="nv">?endDate</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="nf">NOW</span><span class="p">())</span>
 <span class="p">}</span>
 </pre></div>
-</div></section><section class="file-card" id="AGE05_sparql"><div class="file-header">AGE05.sparql</div><div class="query-block"><span class="query-title">AGE05: ¿Qué modalidad tiene cada evento?</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintagenda</span><span class="p">:</span> <span class="nl">&lt;http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#&gt;</span>
+</div></section><section class="file-card" id="AGE05_sparql"><div class="file-header">AGE05.sparql</div><div class="query-block"><span class="query-title">AGE05: ¿Qué modalidad tiene cada evento?</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintagenda</span><span class="p">:</span> <span class="nl">&lt;https://edint.es/def/agenda#&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">schema</span><span class="p">:</span> <span class="nl">&lt;https://schema.org/&gt;</span>
 
 <span class="k">SELECT</span> <span class="nv">?event</span> <span class="nv">?name</span> <span class="nv">?mode</span>
@@ -272,9 +272,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <span class="nv">?mode</span> <span class="nn">skos</span><span class="p">:</span><span class="nt">prefLabel</span> <span class="nv">?modeLabel</span> <span class="p">.</span>
 <span class="p">}</span>
 </pre></div>
-</div></section><section class="file-card" id="AGE06_sparql"><div class="file-header">AGE06.sparql</div><div class="query-block"><span class="query-title">AGE06: ¿Dónde se localizan los eventos (información espacial)?</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintagenda</span><span class="p">:</span> <span class="nl">&lt;http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#&gt;</span>
+</div></section><section class="file-card" id="AGE06_sparql"><div class="file-header">AGE06.sparql</div><div class="query-block"><span class="query-title">AGE06: ¿Dónde se localizan los eventos (información espacial)?</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintagenda</span><span class="p">:</span> <span class="nl">&lt;https://edint.es/def/agenda#&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">schema</span><span class="p">:</span> <span class="nl">&lt;https://schema.org/&gt;</span>
-<span class="k">PREFIX</span> <span class="nn">edintinf</span><span class="p">:</span> <span class="nl">&lt;http://vocab.linkeddata.es/datosabiertos/def/urbanismos-infraestructuras/infraestructura#&gt;</span>
+<span class="k">PREFIX</span> <span class="nn">edintinf</span><span class="p">:</span> <span class="nl">&lt;https://edint.es/def/infraestructura#&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">skos</span><span class="p">:</span> <span class="nl">&lt;http://www.w3.org/2004/02/skos/core#&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">gsp</span><span class="p">:</span> <span class="nl">&lt;http://www.opengis.net/ont/geosparql#&gt;</span>
 
@@ -286,9 +286,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <span class="k">OPTIONAL</span> <span class="p">{</span> <span class="nv">?event</span> <span class="nn">schema</span><span class="p">:</span><span class="nt">name</span> <span class="nv">?name</span> <span class="p">}</span> <span class="p">.</span>
 <span class="p">}</span>
 </pre></div>
-</div></section><section class="file-card" id="AGE07_sparql"><div class="file-header">AGE07.sparql</div><div class="query-block"><span class="query-title">AGE07: ¿Qué eventos tienen documentación asociada?</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintagenda</span><span class="p">:</span> <span class="nl">&lt;http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#&gt;</span>
+</div></section><section class="file-card" id="AGE07_sparql"><div class="file-header">AGE07.sparql</div><div class="query-block"><span class="query-title">AGE07: ¿Qué eventos tienen documentación asociada?</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintagenda</span><span class="p">:</span> <span class="nl">&lt;https://edint.es/def/agenda#&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">schema</span><span class="p">:</span> <span class="nl">&lt;https://schema.org/&gt;</span>
-<span class="k">PREFIX</span> <span class="nn">edintinf</span><span class="p">:</span> <span class="nl">&lt;http://vocab.linkeddata.es/datosabiertos/def/urbanismos-infraestructuras/infraestructura#&gt;</span>
+<span class="k">PREFIX</span> <span class="nn">edintinf</span><span class="p">:</span> <span class="nl">&lt;https://edint.es/def/infraestructura#&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">skos</span><span class="p">:</span> <span class="nl">&lt;http://www.w3.org/2004/02/skos/core#&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">gsp</span><span class="p">:</span> <span class="nl">&lt;http://www.opengis.net/ont/geosparql#&gt;</span>
 
@@ -298,7 +298,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
          <span class="nn">edintagenda</span><span class="p">:</span><span class="nt">documentation</span> <span class="nv">?doc</span> <span class="p">.</span>
 <span class="p">}</span>
 </pre></div>
-</div></section><section class="file-card" id="AGE08_sparql"><div class="file-header">AGE08.sparql</div><div class="query-block"><span class="query-title">AGE08: ¿Qué eventos están dirigidos a un público adulto?</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintagenda</span><span class="p">:</span> <span class="nl">&lt;http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#&gt;</span>
+</div></section><section class="file-card" id="AGE08_sparql"><div class="file-header">AGE08.sparql</div><div class="query-block"><span class="query-title">AGE08: ¿Qué eventos están dirigidos a un público adulto?</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintagenda</span><span class="p">:</span> <span class="nl">&lt;https://edint.es/def/agenda#&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">schema</span><span class="p">:</span> <span class="nl">&lt;https://schema.org/&gt;</span>
 
 <span class="k">SELECT</span> <span class="nv">?event</span> <span class="nv">?name</span>
@@ -312,9 +312,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <span class="k">FILTER</span><span class="p">(</span><span class="nf">CONTAINS</span><span class="p">(</span><span class="nf">LCASE</span><span class="p">(</span><span class="nv">?audience</span><span class="p">),</span> <span class="s">&quot;adult&quot;</span><span class="p">))</span>
 <span class="p">}</span>
 </pre></div>
-</div></section><section class="file-card" id="AGE09_sparql"><div class="file-header">AGE09.sparql</div><div class="query-block"><span class="query-title">AGE09: ¿Qué eventos forman parte de otros eventos?</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintagenda</span><span class="p">:</span> <span class="nl">&lt;http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#&gt;</span>
+</div></section><section class="file-card" id="AGE09_sparql"><div class="file-header">AGE09.sparql</div><div class="query-block"><span class="query-title">AGE09: ¿Qué eventos forman parte de otros eventos?</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintagenda</span><span class="p">:</span> <span class="nl">&lt;https://edint.es/def/agenda#&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">schema</span><span class="p">:</span> <span class="nl">&lt;https://schema.org/&gt;</span>
-<span class="k">PREFIX</span> <span class="nn">edintinf</span><span class="p">:</span> <span class="nl">&lt;http://vocab.linkeddata.es/datosabiertos/def/urbanismos-infraestructuras/infraestructura#&gt;</span>
+<span class="k">PREFIX</span> <span class="nn">edintinf</span><span class="p">:</span> <span class="nl">&lt;https://edint.es/def/infraestructura#&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">skos</span><span class="p">:</span> <span class="nl">&lt;http://www.w3.org/2004/02/skos/core#&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">gsp</span><span class="p">:</span> <span class="nl">&lt;http://www.opengis.net/ont/geosparql#&gt;</span>
 
@@ -324,7 +324,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
          <span class="nn">schema</span><span class="p">:</span><span class="nt">subEvent</span> <span class="nv">?subevent</span> <span class="p">.</span>
 <span class="p">}</span>
 </pre></div>
-</div></section><section class="file-card" id="AGE10_sparql"><div class="file-header">AGE10.sparql</div><div class="query-block"><span class="query-title">AGE01: ¿Qué eventos son de tipo concierto?</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintagenda</span><span class="p">:</span> <span class="nl">&lt;http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#&gt;</span>
+</div></section><section class="file-card" id="AGE10_sparql"><div class="file-header">AGE10.sparql</div><div class="query-block"><span class="query-title">AGE01: ¿Qué eventos son de tipo concierto?</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintagenda</span><span class="p">:</span> <span class="nl">&lt;https://edint.es/def/agenda#&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">schema</span><span class="p">:</span> <span class="nl">&lt;https://schema.org/&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">skos</span><span class="p">:</span> <span class="nl">&lt;http://www.w3.org/2004/02/skos/core#&gt;</span>
 
@@ -341,7 +341,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <span class="k">FILTER</span><span class="p">(</span><span class="nf">CONTAINS</span><span class="p">(</span><span class="nf">LCASE</span><span class="p">(</span><span class="nv">?typeLabel</span><span class="p">),</span> <span class="s">&quot;concierto&quot;</span><span class="p">))</span>
 <span class="p">}</span>
 </pre></div>
-</div></section><section class="file-card" id="AGE11_sparql"><div class="file-header">AGE11.sparql</div><div class="query-block"><span class="query-title">AGE11: ¿Qué eventos gratuitos se celebran en Madrid en el mes de junio?</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintagenda</span><span class="p">:</span> <span class="nl">&lt;http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#&gt;</span>
+</div></section><section class="file-card" id="AGE11_sparql"><div class="file-header">AGE11.sparql</div><div class="query-block"><span class="query-title">AGE11: ¿Qué eventos gratuitos se celebran en Madrid en el mes de junio?</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintagenda</span><span class="p">:</span> <span class="nl">&lt;https://edint.es/def/agenda#&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">schema</span><span class="p">:</span> <span class="nl">&lt;https://schema.org/&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">xsd</span><span class="p">:</span> <span class="nl">&lt;http://www.w3.org/2001/XMLSchema#&gt;</span>
 

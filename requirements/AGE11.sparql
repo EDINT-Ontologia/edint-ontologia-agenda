@@ -1,7 +1,7 @@
 
 # AGE11: ¿Qué eventos gratuitos se celebran en Madrid en el mes de junio?
 
-PREFIX edintagenda: <http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#>
+PREFIX edintagenda: <https://edint.es/def/agenda#>
 PREFIX schema: <https://schema.org/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 

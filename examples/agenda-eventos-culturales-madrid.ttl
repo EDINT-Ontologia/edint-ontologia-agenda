@@ -8,7 +8,7 @@
 @prefix dct:                       <http://purl.org/dc/terms/> .
 @prefix cc:                        <http://creativecommons.org/ns#> .
 
-@prefix edintagenda:               <http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#> .
+@prefix edintagenda:               <https://edint.es/def/agenda#> .
 @prefix edintkos:                  <https://edint.es/kos/> .
 @prefix edinteventstatus:          <https://edint.es/kos/EventStatus/> .
 @prefix edintattendancemode:       <https://edint.es/kos/AttendanceMode/> .

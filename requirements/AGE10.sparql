@@ -1,7 +1,7 @@
 
 # AGE01: ¿Qué eventos son de tipo concierto?
 
-PREFIX edintagenda: <http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#>
+PREFIX edintagenda: <https://edint.es/def/agenda#>
 PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
