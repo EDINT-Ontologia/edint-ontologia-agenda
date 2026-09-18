@@ -54,7 +54,7 @@
             <foaf:homepage rdf:resource="https://www.femp.es/"/>
             <schema:affiliation>Federación Española de Municipios y Provincias</schema:affiliation>
         </dcterms:publisher>
-    <dcterms:bibliographicCitation xml:lang="es">Ontología EDINT de Agenda de Eventos. EDINT. Revision: v0.1.1.</dcterms:bibliographicCitation>
+    <dcterms:bibliographicCitation xml:lang="es">Ontología EDINT de Agenda de Eventos. EDINT. Revisión: v0.1.1.</dcterms:bibliographicCitation>
     <dcterms:bibliographicCitation xml:lang="en">EDINT Event Agenda Ontology. EDINT. Revision: v0.1.1.</dcterms:bibliographicCitation>
     <schema:creativeWorkStatus xml:lang="en">Ontology Specification</schema:creativeWorkStatus>
     <dcterms:abstract xml:lang="es">El propósito de esta ontología es el de proporcionar un vocabulario común para la representación de todos los conceptos relacionados con la agenda de eventos culturales, deportivos y sociales de un municipio.</dcterms:abstract>
