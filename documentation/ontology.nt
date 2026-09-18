@@ -1,20 +1,62 @@
 <https://edint.es/def/agenda> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://edint.es/def/agenda> <http://www.w3.org/2002/07/owl#versionIRI> <https://edint.es/def/agenda> .
-<https://edint.es/def/agenda> <http://purl.org/dc/terms/created> "2026-05-05" .
-<https://edint.es/def/agenda> <http://purl.org/dc/terms/creator> "Daniel Doña" .
-<https://edint.es/def/agenda> <http://purl.org/dc/terms/creator> "Edna Ruckhaus" .
-<https://edint.es/def/agenda> <http://purl.org/dc/terms/creator> "Lucía Sánchez" .
-<https://edint.es/def/agenda> <http://purl.org/dc/terms/creator> "Socorro Bernardos" .
+<https://edint.es/def/agenda> <http://www.w3.org/2002/07/owl#versionIRI> <https://edint.es/def/agenda/0.1.1> .
+<https://edint.es/def/agenda> <http://purl.org/dc/terms/abstract> "El propósito de esta ontología es el de proporcionar un vocabulario común para la representación de todos los conceptos relacionados con la agenda de eventos culturales, deportivos y sociales de un municipio."@en .
+<https://edint.es/def/agenda> <http://purl.org/dc/terms/abstract> "El propósito de esta ontología es el de proporcionar un vocabulario común para la representación de todos los conceptos relacionados con la agenda de eventos culturales, deportivos y sociales de un municipio."@es .
+<https://edint.es/def/agenda> <http://purl.org/dc/terms/bibliographicCitation> "EDINT Event Agenda Ontology. EDINT. Revision: v0.1.1."@en .
+<https://edint.es/def/agenda> <http://purl.org/dc/terms/bibliographicCitation> "Ontología EDINT de Agenda de Eventos. EDINT. Revisión: v0.1.1."@es .
+<https://edint.es/def/agenda> <http://purl.org/dc/terms/created> "2026-05-05"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://edint.es/def/agenda> <http://purl.org/dc/terms/creator> _:genid1 .
+_:genid1 <https://schema.org/affiliation> <https://oeg.fi.upm.es/> .
+_:genid1 <http://xmlns.com/foaf/0.1/name> "Socorro Bernardos" .
+<https://edint.es/def/agenda> <http://purl.org/dc/terms/creator> _:genid2 .
+_:genid2 <https://schema.org/affiliation> <https://oeg.fi.upm.es/> .
+_:genid2 <http://xmlns.com/foaf/0.1/name> "Lucía Sánchez" .
+<https://edint.es/def/agenda> <http://purl.org/dc/terms/creator> _:genid3 .
+_:genid3 <https://schema.org/affiliation> <https://oeg.fi.upm.es/> .
+_:genid3 <http://xmlns.com/foaf/0.1/name> "Edna Ruckhaus" .
+<https://edint.es/def/agenda> <http://purl.org/dc/terms/creator> _:genid4 .
+_:genid4 <https://schema.org/affiliation> <https://oeg.fi.upm.es/> .
+_:genid4 <http://xmlns.com/foaf/0.1/name> "Daniel Doña" .
 <https://edint.es/def/agenda> <http://purl.org/dc/terms/description> "The Agenda ontology represents the agenda of cultural, sporting and social events that take place in the municipality."@es .
-<https://edint.es/def/agenda> <http://purl.org/dc/terms/issued> "2026-05-05"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://edint.es/def/agenda> <http://purl.org/dc/terms/issued> "2026-09-17"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://edint.es/def/agenda> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
-<https://edint.es/def/agenda> <http://purl.org/dc/terms/title> "Vocabulario para la representación de la agenda cultural, deportiva y social de un municipio"@es .
-<https://edint.es/def/agenda> <http://purl.org/dc/terms/title> "Vocabulary for the representation of the cultural, sporting and social agenda of a municipality"@en .
+<https://edint.es/def/agenda> <http://purl.org/dc/terms/modified> "2026-09-17"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://edint.es/def/agenda> <http://purl.org/dc/terms/publisher> _:genid5 .
+_:genid5 <https://schema.org/affiliation> "Federación Española de Municipios y Provincias" .
+_:genid5 <http://xmlns.com/foaf/0.1/name> "FEMP" .
+_:genid5 <http://xmlns.com/foaf/0.1/homepage> <https://www.femp.es/> .
+<https://edint.es/def/agenda> <http://purl.org/dc/terms/title> "EDINT Event Agenda Ontology"@en .
+<https://edint.es/def/agenda> <http://purl.org/dc/terms/title> "Ontología EDINT de Agenda de Eventos"@es .
 <https://edint.es/def/agenda> <http://purl.org/vocab/vann/preferredNamespacePrefix> "edintagenda" .
 <https://edint.es/def/agenda> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://edint.es/def/agenda#" .
 <https://edint.es/def/agenda> <http://www.w3.org/2000/01/rdf-schema#comment> "https://edint.es/def/agenda" .
+<https://edint.es/def/agenda> <http://www.w3.org/2000/01/rdf-schema#label> "Agenda de Eventos"@es .
+<https://edint.es/def/agenda> <http://www.w3.org/2000/01/rdf-schema#label> "Event Agenda"@en .
 <https://edint.es/def/agenda> <http://www.w3.org/2002/07/owl#priorVersion> <https://github.com/EDINT-Ontologia/edint-ontologia-agenda/releases/tag/v0.1.0> .
 <https://edint.es/def/agenda> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.1" .
+<https://edint.es/def/agenda> <https://schema.org/codeRepository> <https://github.com/EDINT-Ontologia/edint-ontologia-agenda> .
+<https://edint.es/def/agenda> <https://schema.org/creativeWorkStatus> "Ontology Specification"@en .
+<https://edint.es/def/agenda> <https://schema.org/funding> "Espacio de Datos para las Infraestructuras Urbanas Inteligentes (EDINT)" .
+<https://edint.es/def/agenda> <https://w3id.org/widoco/vocab#jsonldSerialization> "ontology.jsonld" .
+<https://edint.es/def/agenda> <https://w3id.org/widoco/vocab#ntSerialization> "ontology.nt" .
+<https://edint.es/def/agenda> <https://w3id.org/widoco/vocab#rdfxmlSerialization> "ontology.rdf" .
+<https://edint.es/def/agenda> <https://w3id.org/widoco/vocab#turtleSerialization> "ontology.ttl" .
+<https://edint.es/def/agenda> <https://w3id.org/widoco/vocab#vocabularyLabel> _:genid6 .
+_:genid6 <https://w3id.org/widoco/vocab#vocabularyIRI> <https://edint.es/def/infraestructura> .
+_:genid6 <http://www.w3.org/2000/01/rdf-schema#label> "Infrastructure (edintinf)"@en .
+_:genid6 <http://www.w3.org/2000/01/rdf-schema#label> "Infraestructura (edintinf)"@es .
+<https://edint.es/def/agenda> <https://w3id.org/widoco/vocab#vocabularyLabel> _:genid7 .
+_:genid7 <https://w3id.org/widoco/vocab#vocabularyIRI> <http://www.opengis.net/ont/geosparql> .
+_:genid7 <http://www.w3.org/2000/01/rdf-schema#label> "GeoSPARQL"@es .
+_:genid7 <http://www.w3.org/2000/01/rdf-schema#label> "GeoSPARQL"@en .
+<https://edint.es/def/agenda> <https://w3id.org/widoco/vocab#vocabularyLabel> _:genid8 .
+_:genid8 <https://w3id.org/widoco/vocab#vocabularyIRI> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal> .
+_:genid8 <http://www.w3.org/2000/01/rdf-schema#label> "Postal Address (esdir)"@en .
+_:genid8 <http://www.w3.org/2000/01/rdf-schema#label> "Dirección Postal (esdir)"@es .
+<https://edint.es/def/agenda> <https://w3id.org/widoco/vocab#vocabularyLabel> _:genid9 .
+_:genid9 <https://w3id.org/widoco/vocab#vocabularyIRI> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio> .
+_:genid9 <http://www.w3.org/2000/01/rdf-schema#label> "Territory (esadm)"@en .
+_:genid9 <http://www.w3.org/2000/01/rdf-schema#label> "Territorio (esadm)"@es .
 # 
 # 
 # #################################################################
@@ -43,6 +85,12 @@
 # http://purl.org/dc/elements/1.1/identifier
 <http://purl.org/dc/elements/1.1/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
+# http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # http://purl.org/dc/terms/created
 <http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
@@ -58,6 +106,12 @@
 # http://purl.org/dc/terms/license
 <http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # http://purl.org/dc/terms/title
 <http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
@@ -72,6 +126,42 @@
 # 
 # http://www.w3.org/2004/02/skos/core#prefLabel
 <http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://xmlns.com/foaf/0.1/homepage
+<http://xmlns.com/foaf/0.1/homepage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/affiliation
+<https://schema.org/affiliation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/codeRepository
+<https://schema.org/codeRepository> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/creativeWorkStatus
+<https://schema.org/creativeWorkStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/funding
+<https://schema.org/funding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/widoco/vocab#jsonldSerialization
+<https://w3id.org/widoco/vocab#jsonldSerialization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/widoco/vocab#ntSerialization
+<https://w3id.org/widoco/vocab#ntSerialization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/widoco/vocab#rdfxmlSerialization
+<https://w3id.org/widoco/vocab#rdfxmlSerialization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/widoco/vocab#turtleSerialization
+<https://w3id.org/widoco/vocab#turtleSerialization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/widoco/vocab#vocabularyIRI
+<https://w3id.org/widoco/vocab#vocabularyIRI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/widoco/vocab#vocabularyLabel
+<https://w3id.org/widoco/vocab#vocabularyLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # 
 # 
@@ -126,10 +216,10 @@
 # https://edint.es/def/agenda#attendanceMode
 <https://edint.es/def/agenda#attendanceMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://edint.es/def/agenda#attendanceMode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/agenda#CityEvent> .
-<https://edint.es/def/agenda#attendanceMode> <http://www.w3.org/2000/01/rdf-schema#range> _:genid1 .
-_:genid1 <http://www.w3.org/2002/07/owl#hasValue> <https://edint.es/kos/AttendanceMode> .
-_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://edint.es/def/agenda#attendanceMode> <http://www.w3.org/2000/01/rdf-schema#range> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#hasValue> <https://edint.es/kos/AttendanceMode> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://edint.es/def/agenda#attendanceMode> <http://www.w3.org/2000/01/rdf-schema#comment> "Attendance mode, for example, in person, online."@en .
 <https://edint.es/def/agenda#attendanceMode> <http://www.w3.org/2000/01/rdf-schema#comment> "Modalidad de asistencia, por ejemplo, presencial, en línea."@es .
 <https://edint.es/def/agenda#attendanceMode> <http://www.w3.org/2000/01/rdf-schema#label> "attendance mode"@en .
@@ -149,10 +239,10 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://edint.es/def/agenda#eventStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://edint.es/def/agenda#eventStatus> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
 <https://edint.es/def/agenda#eventStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/agenda#CityEvent> .
-<https://edint.es/def/agenda#eventStatus> <http://www.w3.org/2000/01/rdf-schema#range> _:genid2 .
-_:genid2 <http://www.w3.org/2002/07/owl#hasValue> <https://edint.es/kos/EventStatus> .
-_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://edint.es/def/agenda#eventStatus> <http://www.w3.org/2000/01/rdf-schema#range> _:genid11 .
+_:genid11 <http://www.w3.org/2002/07/owl#hasValue> <https://edint.es/kos/EventStatus> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://edint.es/def/agenda#eventStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Estado de un evento, por ejemplo, activo o cancelado."@es .
 <https://edint.es/def/agenda#eventStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Status of an event, for example, active or cancelled."@en .
 <https://edint.es/def/agenda#eventStatus> <http://www.w3.org/2000/01/rdf-schema#label> "estado del evento"@es .
@@ -162,10 +252,10 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://edint.es/def/agenda#eventType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://edint.es/def/agenda#eventType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://edint.es/def/agenda#eventType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/agenda#CityEvent> .
-<https://edint.es/def/agenda#eventType> <http://www.w3.org/2000/01/rdf-schema#range> _:genid3 .
-_:genid3 <http://www.w3.org/2002/07/owl#hasValue> <https://edint.es/kos/EventType> .
-_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://edint.es/def/agenda#eventType> <http://www.w3.org/2000/01/rdf-schema#range> _:genid12 .
+_:genid12 <http://www.w3.org/2002/07/owl#hasValue> <https://edint.es/kos/EventType> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://edint.es/def/agenda#eventType> <http://www.w3.org/2000/01/rdf-schema#comment> "Tipo de evento que tendrá lugar."@es .
 <https://edint.es/def/agenda#eventType> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of event to be held."@en .
 <https://edint.es/def/agenda#eventType> <http://www.w3.org/2000/01/rdf-schema#label> "tipo de evento"@es .
@@ -174,27 +264,27 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # https://edint.es/def/agenda#isHeldIn
 <https://edint.es/def/agenda#isHeldIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://edint.es/def/agenda#isHeldIn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/agenda#CityEvent> .
-<https://edint.es/def/agenda#isHeldIn> <http://www.w3.org/2000/01/rdf-schema#range> _:genid4 .
-_:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid10 .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Provincia> .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio> .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Distrito> .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Ciudad> .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Barrio> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Autonomia> .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://edint.es/def/agenda#isHeldIn> <http://www.w3.org/2000/01/rdf-schema#range> _:genid13 .
+_:genid13 <http://www.w3.org/2002/07/owl#unionOf> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Provincia> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Distrito> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Ciudad> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Barrio> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Autonomia> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://edint.es/def/agenda#isHeldIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Relación entre el Evento y la entidad administrativa en donde se celebra, por ejemplo el Barrio o el Distrito."@es .
 <https://edint.es/def/agenda#isHeldIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between the Event and the administrative entity where it is held in, for example the Neighborhood or the District."@en .
 <https://edint.es/def/agenda#isHeldIn> <http://www.w3.org/2000/01/rdf-schema#label> "is held in"@en .
@@ -635,5 +725,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
 <http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#label> "identificador"@es .
 <http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#label> "identifier"@en .
+# 
+<https://oeg.fi.upm.es/> <http://xmlns.com/foaf/0.1/name> "Ontology Engineering Group, UPM" .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
