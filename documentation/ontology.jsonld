@@ -683,7 +683,7 @@
     "@value" : "edintagenda"
   } ],
   "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
-    "@value" : "https://edint.es/def/agenda#"
+    "@id" : "https://edint.es/def/agenda#"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "https://edint.es/def/agenda"

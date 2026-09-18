@@ -32,7 +32,7 @@
         <terms:title xml:lang="en">EDINT Event Agenda Ontology</terms:title>
         <terms:title xml:lang="es">Ontología EDINT de Agenda de Eventos</terms:title>
         <vann:preferredNamespacePrefix>edintagenda</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri>https://edint.es/def/agenda#</vann:preferredNamespaceUri>
+        <vann:preferredNamespaceUri rdf:resource="https://edint.es/def/agenda#"/>
         <rdfs:comment>https://edint.es/def/agenda</rdfs:comment>
         <rdfs:label xml:lang="es">Agenda de Eventos</rdfs:label>
         <rdfs:label xml:lang="en">Event Agenda</rdfs:label>
