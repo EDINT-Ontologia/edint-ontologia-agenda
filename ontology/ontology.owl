@@ -42,7 +42,7 @@
         <rdfs:label xml:lang="es">Agenda de Eventos</rdfs:label>
         <rdfs:label xml:lang="en">Event Agenda</rdfs:label>
         <vann:preferredNamespacePrefix>edintagenda</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri>https://edint.es/def/agenda#</vann:preferredNamespaceUri>
+        <vann:preferredNamespaceUri rdf:resource="https://edint.es/def/agenda#"/>
         <rdfs:comment>https://edint.es/def/agenda</rdfs:comment>
         <owl:priorVersion rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-agenda/releases/tag/v0.1.0"/>
         <schema:codeRepository rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-agenda"/>
