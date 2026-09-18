@@ -1,4 +1,4 @@
-# Ontología de Agenda (Agenda ontology)
+# Ontología EDINT de Agenda de Eventos
 
 [![Documentación](https://img.shields.io/badge/documentaci%C3%B3n-edint.es-blue)](https://edint.es/def/agenda)
 ![Prefijo](https://img.shields.io/badge/prefijo-edintagenda-informational)
