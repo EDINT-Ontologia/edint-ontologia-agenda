@@ -10,5 +10,5 @@ PREFIX gsp: <http://www.opengis.net/ont/geosparql#>
 SELECT ?event 
 WHERE {
   ?event a edintagenda:CityEvent ;
-         edintagenda:takesPlace URI_DEL_EQUIPAMIENTO> .
+         edintagenda:takesPlace <URI_DEL_EQUIPAMIENTO> .
 }
