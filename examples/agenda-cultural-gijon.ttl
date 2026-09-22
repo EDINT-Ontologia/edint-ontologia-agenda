@@ -9,10 +9,11 @@
 @prefix cc:                        <http://creativecommons.org/ns#> .
 
 @prefix edintagenda:               <https://edint.es/def/agenda#> .
-@prefix edintkos:                  <http://vocab.linkeddata.es/datosabiertos/kos/cultura-ocio/agenda/> .
-@prefix edinteventstatus:          <http://vocab.linkeddata.es/datosabiertos/kos/cultura-ocio/agenda/event-status/> .
-@prefix edintattendancemode:       <http://vocab.linkeddata.es/datosabiertos/kos/cultura-ocio/agenda/attendance-mode/> .
-@prefix edinteventtype:            <http://vocab.linkeddata.es/datosabiertos/kos/cultura-ocio/agenda/event-type/> .
+@prefix edintinf:                  <https://edint.es/def/infraestructura#> .
+@prefix edintkos:                  <https://edint.es/kos/> .
+@prefix edinteventstatus:          <https://edint.es/kos/EventStatus/> .
+@prefix edintattendancemode:       <https://edint.es/kos/AttendanceMode/> .
+@prefix edinteventtype:            <https://edint.es/kos/EventType/> .
 
 
 <http://vocab.linkeddata.es/datosabiertos/recurso/city-event/gijon-40658>
@@ -40,7 +41,7 @@
     dct:source <https://www.gijon.es> .
 
 <http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento/centro-municipal-integrado-ateneo-de-la-calzada>
-    a edintagenda:Facility ;
+    a edintinf:Facility ;
     rdfs:label "Centro Municipal Integrado Ateneo de La Calzada"@es .
 
 <http://vocab.linkeddata.es/datosabiertos/recurso/direccion-postal/centro-municipal-integrado-ateneo-de-la-calzada>

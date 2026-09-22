@@ -9,10 +9,11 @@
 @prefix cc:                        <http://creativecommons.org/ns#> .
 
 @prefix edintagenda:               <https://edint.es/def/agenda#> .
-@prefix edintkos:                  <http://vocab.linkeddata.es/datosabiertos/kos/cultura-ocio/agenda/> .
-@prefix edinteventstatus:          <http://vocab.linkeddata.es/datosabiertos/kos/cultura-ocio/agenda/event-status/> .
-@prefix edintattendancemode:       <http://vocab.linkeddata.es/datosabiertos/kos/cultura-ocio/agenda/attendance-mode/> .
-@prefix edinteventtype:            <http://vocab.linkeddata.es/datosabiertos/kos/cultura-ocio/agenda/event-type/> .
+@prefix edintinf:                  <https://edint.es/def/infraestructura#> .
+@prefix edintkos:                  <https://edint.es/kos/> .
+@prefix edinteventstatus:          <https://edint.es/kos/EventStatus/> .
+@prefix edintattendancemode:       <https://edint.es/kos/AttendanceMode/> .
+@prefix edinteventtype:            <https://edint.es/kos/EventType/> .
 
 
 <http://vocab.linkeddata.es/datosabiertos/recurso/city-event/madrid-deporte-50292978>
@@ -39,7 +40,7 @@
     schema:encodingFormat "text/html" .
 
 <http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento/parque-juan-carlos-i>
-    a edintagenda:Facility, gsp:Feature ;
+    a edintinf:Facility, gsp:Feature ;
     rdfs:label "Parque Juan Carlos I"@es ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=8d9a78a0dea9e210VgnVCM1000000b205a0aRCRD> ;
     gsp:hasGeometry <http://vocab.linkeddata.es/datosabiertos/recurso/geometria/parque-juan-carlos-i> .

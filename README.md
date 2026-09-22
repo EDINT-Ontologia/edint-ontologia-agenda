@@ -1,21 +1,25 @@
-# Ontología de Agenda (Agenda ontology)
+# Ontología EDINT de Agenda de Eventos
+
+[![Documentación](https://img.shields.io/badge/documentaci%C3%B3n-edint.es-blue)](https://edint.es/def/agenda)
+![Prefijo](https://img.shields.io/badge/prefijo-edintagenda-informational)
+[![Licencia](https://img.shields.io/badge/licencia-CC%20BY--SA%204.0-lightgrey)](LICENSE)
 
 La ontología de Agenda representa los eventos culturales, deportivos y sociales que se llevan a cabo en una ciudad.
 
 
-# Propósito y alcance de la ontología (Purpose and scope of the ontology)
+## Propósito y alcance de la ontología (Purpose and scope of the ontology)
 
-El propósito de esta ontología es el de proporcionar un vocabulario común para la representación de datos principales de los eventos culturales, deportivos y sociales de un municipio. Su alcance incluye todo tipo de eventos representados mediante una taxonomía, el lugar donde se llevan a cabo, es decir, un elemento de la infraestructura municipal tal como por ejemplo, un centro cultural. Su alcance cubre los datos que pueden ser utilizados con los propósitos de conocer y gestionar los eventps que se llevan a cabo en el municipio que es parte de las funciones habituales de las entidades locales.
+El propósito de esta ontología es el de proporcionar un vocabulario común para la representación de datos principales de los eventos culturales, deportivos y sociales de un municipio. Su alcance incluye todo tipo de eventos representados mediante una taxonomía, el lugar donde se llevan a cabo, es decir, un elemento de la infraestructura municipal tal como por ejemplo, un centro cultural. Su alcance cubre los datos que pueden ser utilizados con los propósitos de conocer y gestionar los eventos que se llevan a cabo en el municipio que es parte de las funciones habituales de las entidades locales.
 
-# Prefijo y espacio de nombres de la ontología (Prefix and namespace of the ontology)
+## Prefijo y espacio de nombres de la ontología (Prefix and namespace of the ontology)
 
-El prefijo de la ontología es edintagenda y se encuentra publicada en el espacio de nombres [https://edint.es/def/agenda#](https://edint.es/def/agenda#) 
+El prefijo de esta ontología es `edintagenda` y se publica bajo el espacio de nombres https://edint.es/def/agenda#
 
-# Modelo conceptual de la ontología (Ontology conceptual model)
+## Modelo conceptual de la ontología (Ontology conceptual model)
 
 ![Modelo conceptual](diagrams/diagrama-conceptual.png)
 
-# Estructura del repositorio (Repository and structure)
+## Estructura del repositorio (Repository and structure)
 
 El repositorio debe contener (al menos) las siguientes carpetas
 
@@ -27,13 +31,13 @@ El repositorio debe contener (al menos) las siguientes carpetas
 | **kos/** | Contiene la implementación de vocabularios controlados o KOS, generalmente implementaciones SKOS en RDF.|
 | **ontology/** | Contiene los archivos de implementación de la ontología en formatos como .owl, .rdf, .ttl o .jsonld |
 | **requirements/** | Contiene todos los documentos utilizados para definir los requisitos de la ontología: ejemplos de datos, preguntas de competencia, requisitos funcionales, casos de uso, etc. |
-| **shapes/** | Contiene las restricciones SHACL utilizad para validar datos respecto a la ontología.  |
+| **shapes/** | Contiene las restricciones SHACL utilizadas para validar datos respecto a la ontología.  |
 
-# Mantenimiento del proyecto (Project maintenance) 
+## Mantenimiento del proyecto (Project maintenance) 
 
 Para manejar las incidencias o mejoras sugeridas con respecto a la ontología, recomendamos seguir las guías proporcionadas en ([Issues Management](./ISSUES.md)) para generar una incidencia.
 
-# Financiación (Funding)
+## Financiación (Funding)
 
 Esta ontología ha sido desarrollada en el contexto del Espacio de Datos para las Infraestructuras Urbanas Inteligentes ([EDINT](https://edint.es/)). 
 
