@@ -7,8 +7,9 @@
 @prefix cc:                   <http://creativecommons.org/ns#> .
 
 @prefix edintagenda:          <https://edint.es/def/agenda#> .
-@prefix edintkos:             <http://vocab.linkeddata.es/datosabiertos/kos/cultura-ocio/agenda/> .
-@prefix edinteventstatus:     <http://vocab.linkeddata.es/datosabiertos/kos/cultura-ocio/agenda/event-status/> .
+@prefix edintkos:             <https://edint.es/kos/> .
+@prefix edinteventstatus:     <https://edint.es/kos/EventStatus/> .
+
 
 
 #################################################################
