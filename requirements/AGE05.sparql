@@ -12,10 +12,10 @@ WHERE {
   OPTIONAL { ?event schema:name ?name }
 }
 
-# Variante para un evento concreto
+# VARIANTE para un evento concreto (no ejecutable tal cual; sustituir el IRI)
 
-SELECT ?modeLabel
-WHERE {
-  <URI_EVENTO> edintagenda:attendanceMode ?mode .
-  ?mode skos:prefLabel ?modeLabel .
-}
+# SELECT ?modeLabel
+# WHERE {
+#   <http://example.org/placeholder/URI_EVENTO> edintagenda:attendanceMode ?mode .
+#   ?mode skos:prefLabel ?modeLabel .
+# }
