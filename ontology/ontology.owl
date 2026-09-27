@@ -36,7 +36,7 @@
             <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
         </dcterms:creator>
         <dcterms:description xml:lang="es">The Agenda ontology represents the agenda of cultural, sporting and social events that take place in the municipality.</dcterms:description>
-        <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <dcterms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
         <dcterms:title xml:lang="es">Ontología EDINT de Agenda de Eventos</dcterms:title>
         <dcterms:title xml:lang="en">EDINT Event Agenda Ontology</dcterms:title>
         <rdfs:label xml:lang="es">Agenda de Eventos</rdfs:label>
