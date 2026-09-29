@@ -10,7 +10,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT ?event ?name ?startDate ?endDate ?statusLabel
 WHERE {
   ?event a edintagenda:CityEvent ;
-         edintagenda:eventStatus ?status ;
+         schema:eventStatus ?status ;
          schema:startDate ?startDate ;
          schema:endDate ?endDate .
 
@@ -21,6 +21,8 @@ WHERE {
   # Excluir eventos cancelados
   FILTER(!CONTAINS(LCASE(?statusLabel), "cancel"))
 
-  # Fecha de fin posterior al momento actual
-  FILTER(xsd:dateTime(?endDate) >= NOW())
+  # Fecha de fin posterior a la fecha de referencia (comparación textual válida
+  # para xsd:date y xsd:dateTime en formato ISO 8601)
+  # PARAM: fecha de referencia
+  FILTER(STR(?endDate) >= "2026-05-22")
 }
