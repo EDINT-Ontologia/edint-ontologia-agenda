@@ -36,7 +36,7 @@
             <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
         </dcterms:creator>
         <dcterms:description xml:lang="es">The Agenda ontology represents the agenda of cultural, sporting and social events that take place in the municipality.</dcterms:description>
-        <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <dcterms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
         <dcterms:title xml:lang="es">Ontología EDINT de Agenda de Eventos</dcterms:title>
         <dcterms:title xml:lang="en">EDINT Event Agenda Ontology</dcterms:title>
         <rdfs:label xml:lang="es">Agenda de Eventos</rdfs:label>
@@ -61,7 +61,39 @@
     <schema:creativeWorkStatus xml:lang="en">Ontology Specification</schema:creativeWorkStatus>
     <dcterms:abstract xml:lang="es">El propósito de esta ontología es el de proporcionar un vocabulario común para la representación de todos los conceptos relacionados con la agenda de eventos culturales, deportivos y sociales de un municipio.</dcterms:abstract>
     <dcterms:abstract xml:lang="en">El propósito de esta ontología es el de proporcionar un vocabulario común para la representación de todos los conceptos relacionados con la agenda de eventos culturales, deportivos y sociales de un municipio.</dcterms:abstract>
-</owl:Ontology>
+        <widoco:rdfxmlSerialization>ontology.rdf</widoco:rdfxmlSerialization>
+        <widoco:turtleSerialization>ontology.ttl</widoco:turtleSerialization>
+        <widoco:ntSerialization>ontology.nt</widoco:ntSerialization>
+        <widoco:jsonldSerialization>ontology.jsonld</widoco:jsonldSerialization>
+            <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"/>
+                <rdfs:label xml:lang="es">Territorio (esadm)</rdfs:label>
+                <rdfs:label xml:lang="en">Territory (esadm)</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
+        <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal"/>
+                <rdfs:label xml:lang="es">Dirección Postal (esdir)</rdfs:label>
+                <rdfs:label xml:lang="en">Postal Address (esdir)</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
+        <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="http://www.opengis.net/ont/geosparql"/>
+                <rdfs:label xml:lang="es">GeoSPARQL</rdfs:label>
+                <rdfs:label xml:lang="en">GeoSPARQL</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
+        <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="https://edint.es/def/infraestructura"/>
+                <rdfs:label xml:lang="es">Infraestructura (edintinf)</rdfs:label>
+                <rdfs:label xml:lang="en">Infrastructure (edintinf)</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
+    </owl:Ontology>
     <foaf:Organization rdf:about="https://oeg.fi.upm.es/">
         <foaf:name>Ontology Engineering Group, UPM</foaf:name>
     </foaf:Organization>
@@ -986,40 +1018,7 @@ Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por
         <rdfs:label xml:lang="en">identifier</rdfs:label>
     </rdf:Description>
     <!-- Nombres de fichero de las serializaciones generadas (vocabulario Widoco) -->
-    <owl:Ontology rdf:about="https://edint.es/def/agenda">
-        <widoco:rdfxmlSerialization>ontology.rdf</widoco:rdfxmlSerialization>
-        <widoco:turtleSerialization>ontology.ttl</widoco:turtleSerialization>
-        <widoco:ntSerialization>ontology.nt</widoco:ntSerialization>
-        <widoco:jsonldSerialization>ontology.jsonld</widoco:jsonldSerialization>
-            <widoco:vocabularyLabel>
-            <rdf:Description>
-                <widoco:vocabularyIRI rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"/>
-                <rdfs:label xml:lang="es">Territorio (esadm)</rdfs:label>
-                <rdfs:label xml:lang="en">Territory (esadm)</rdfs:label>
-            </rdf:Description>
-        </widoco:vocabularyLabel>
-        <widoco:vocabularyLabel>
-            <rdf:Description>
-                <widoco:vocabularyIRI rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal"/>
-                <rdfs:label xml:lang="es">Dirección Postal (esdir)</rdfs:label>
-                <rdfs:label xml:lang="en">Postal Address (esdir)</rdfs:label>
-            </rdf:Description>
-        </widoco:vocabularyLabel>
-        <widoco:vocabularyLabel>
-            <rdf:Description>
-                <widoco:vocabularyIRI rdf:resource="http://www.opengis.net/ont/geosparql"/>
-                <rdfs:label xml:lang="es">GeoSPARQL</rdfs:label>
-                <rdfs:label xml:lang="en">GeoSPARQL</rdfs:label>
-            </rdf:Description>
-        </widoco:vocabularyLabel>
-        <widoco:vocabularyLabel>
-            <rdf:Description>
-                <widoco:vocabularyIRI rdf:resource="https://edint.es/def/infraestructura"/>
-                <rdfs:label xml:lang="es">Infraestructura (edintinf)</rdfs:label>
-                <rdfs:label xml:lang="en">Infrastructure (edintinf)</rdfs:label>
-            </rdf:Description>
-        </widoco:vocabularyLabel>
-</owl:Ontology>
+    
 </rdf:RDF>
 
 
