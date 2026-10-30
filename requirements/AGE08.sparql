@@ -11,6 +11,6 @@ WHERE {
 
   OPTIONAL { ?event schema:name ?name }
 
-  # Filtrar público adulto
-  FILTER(CONTAINS(LCASE(?audience), "adult"))
+  # Filtrar público general (valor usado en los ejemplos)
+  FILTER(CONTAINS(LCASE(STR(?audience)), "general"))
 }

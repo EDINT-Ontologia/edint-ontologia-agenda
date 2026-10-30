@@ -12,6 +12,7 @@ PREFIX gsp: <http://www.opengis.net/ont/geosparql#>
 SELECT ?event ?name ?geometry
 WHERE {
   ?event a edintagenda:CityEvent ;
-         gsp:hasGeometry ?geometry ;
-  OPTIONAL { ?event schema:name ?name } .
+         edintagenda:takesPlaceIn ?lugar .
+  ?lugar gsp:hasGeometry ?geometry .
+  OPTIONAL { ?event schema:name ?name }
 }
