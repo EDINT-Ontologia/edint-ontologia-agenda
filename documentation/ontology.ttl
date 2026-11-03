@@ -19,7 +19,7 @@
                                                                   _:genid4 ;
                                <http://purl.org/dc/terms/description> "The Agenda ontology represents the agenda of cultural, sporting and social events that take place in the municipality."@es ;
                                <http://purl.org/dc/terms/issued> "2026-09-17"^^xsd:date ;
-                               <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
+                               <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by-sa/4.0/> ;
                                <http://purl.org/dc/terms/modified> "2026-09-17"^^xsd:date ;
                                <http://purl.org/dc/terms/publisher> _:genid5 ;
                                <http://purl.org/dc/terms/title> "EDINT Event Agenda Ontology"@en ,
