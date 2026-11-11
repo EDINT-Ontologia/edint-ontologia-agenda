@@ -26,7 +26,7 @@
         <terms:creator rdf:nodeID="genid4"/>
         <terms:description xml:lang="es">The Agenda ontology represents the agenda of cultural, sporting and social events that take place in the municipality.</terms:description>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-17</terms:issued>
-        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-17</terms:modified>
         <terms:publisher rdf:nodeID="genid5"/>
         <terms:title xml:lang="en">EDINT Event Agenda Ontology</terms:title>
