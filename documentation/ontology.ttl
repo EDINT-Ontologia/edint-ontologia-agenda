@@ -17,7 +17,8 @@
                                                                   _:genid2 ,
                                                                   _:genid3 ,
                                                                   _:genid4 ;
-                               <http://purl.org/dc/terms/description> "The Agenda ontology represents the agenda of cultural, sporting and social events that take place in the municipality."@es ;
+                               <http://purl.org/dc/terms/description> "La ontología de Agenda representa la agenda de eventos culturales, deportivos y sociales que tienen lugar en el municipio."@es ,
+                                                                      "The Agenda ontology represents the agenda of cultural, sporting and social events that take place in the municipality."@en ;
                                <http://purl.org/dc/terms/issued> "2026-09-17"^^xsd:date ;
                                <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by-sa/4.0/> ;
                                <http://purl.org/dc/terms/modified> "2026-09-17"^^xsd:date ;
@@ -25,7 +26,7 @@
                                <http://purl.org/dc/terms/title> "EDINT Event Agenda Ontology"@en ,
                                                                 "Ontología EDINT de Agenda de Eventos"@es ;
                                <http://purl.org/vocab/vann/preferredNamespacePrefix> "edintagenda" ;
-                               <http://purl.org/vocab/vann/preferredNamespaceUri> : ;
+                               <http://purl.org/vocab/vann/preferredNamespaceUri> "https://edint.es/def/agenda#" ;
                                rdfs:comment "https://edint.es/def/agenda" ;
                                rdfs:label "Agenda de Eventos"@es ,
                                           "Event Agenda"@en ;

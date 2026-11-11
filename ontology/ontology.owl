@@ -35,14 +35,15 @@
             <foaf:name>Socorro Bernardos</foaf:name>
             <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
         </dcterms:creator>
-        <dcterms:description xml:lang="es">The Agenda ontology represents the agenda of cultural, sporting and social events that take place in the municipality.</dcterms:description>
+        <dcterms:description xml:lang="es">La ontología de Agenda representa la agenda de eventos culturales, deportivos y sociales que tienen lugar en el municipio.</dcterms:description>
+        <dcterms:description xml:lang="en">The Agenda ontology represents the agenda of cultural, sporting and social events that take place in the municipality.</dcterms:description>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
         <dcterms:title xml:lang="es">Ontología EDINT de Agenda de Eventos</dcterms:title>
         <dcterms:title xml:lang="en">EDINT Event Agenda Ontology</dcterms:title>
         <rdfs:label xml:lang="es">Agenda de Eventos</rdfs:label>
         <rdfs:label xml:lang="en">Event Agenda</rdfs:label>
         <vann:preferredNamespacePrefix>edintagenda</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri rdf:resource="https://edint.es/def/agenda#"/>
+        <vann:preferredNamespaceUri>https://edint.es/def/agenda#</vann:preferredNamespaceUri>
         <rdfs:comment>https://edint.es/def/agenda</rdfs:comment>
         <owl:priorVersion rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-agenda/releases/tag/v0.1.0"/>
         <schema:codeRepository rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-agenda"/>

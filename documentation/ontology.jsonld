@@ -656,6 +656,9 @@
   } ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "es",
+    "@value" : "La ontología de Agenda representa la agenda de eventos culturales, deportivos y sociales que tienen lugar en el municipio."
+  }, {
+    "@language" : "en",
     "@value" : "The Agenda ontology represents the agenda of cultural, sporting and social events that take place in the municipality."
   } ],
   "http://purl.org/dc/terms/issued" : [ {
@@ -683,7 +686,7 @@
     "@value" : "edintagenda"
   } ],
   "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
-    "@id" : "https://edint.es/def/agenda#"
+    "@value" : "https://edint.es/def/agenda#"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "https://edint.es/def/agenda"
