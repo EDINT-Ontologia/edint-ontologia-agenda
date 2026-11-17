@@ -26,7 +26,7 @@
     schema:eventStatus edinteventstatus:Scheduled ;
     edintagenda:attendanceMode edintattendancemode:InPerson ;
     edintagenda:eventType edinteventtype:Ferias ;
-    edintagenda:schedule "L,M,X,J,V,S,D"@es ;
+    edintagenda:timetable "L,M,X,J,V,S,D"@es ;
     edintagenda:documentation <http://vocab.linkeddata.es/datosabiertos/recurso/documento-digital/madrid-cultural-50280843> ;
     edintagenda:takesPlaceIn <http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento/jardin-del-bulevar-de-pena-gorbea> ;
     edintagenda:organizedBy <http://vocab.linkeddata.es/datosabiertos/recurso/organizacion/ayuntamiento-madrid> ;

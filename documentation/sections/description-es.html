@@ -7,18 +7,21 @@ Figura 1. Modelo conceptual de la ontología</figcaption></center></p></span>
 
 El concepto principal de este vocabulario es el de un <a href="#CityEvent">evento que tiene lugar en una ciudad</a>. El lugar en donde <a href="#takesPlaceIn">se realiza el evento</a> puede ser un <a href="#https://edint.es/def/infraestructura#Facility">equipamiento de la ciudad</a>  tal como el edificio del ayuntamiento, un centro cultural, etc. Un evento tiene una dirección que puede estar normalizada utilizando las propiedades de la clase  <a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal">esdir:DireccionPostal</a>. Adicionalmente, en este vocabulario se han utilizado varios esquemas de conceptos SKOS para representar el tipo de evento, la modalidad de asistencia (presencial, en línea o mixto) o el estado de un evento (programado, cancelado, aplazado o reprogramado).
 </p>
+<p> Para eventos recurrentes se utiliza la clase <a href="#https://schema.org/Schedule">Schedule</a> y la propiedad <a href="#https://schema.org/eventSchedule">eventSchedule</a>. De esta manera una instancia de la clase define una programación, es decir un periodo de tiempo recurrente que sirve para describir un evento que tiene lugar de forma periódica. Como mínimo, una programación especifica una <a href="#https://schema.org/repeatFrequency">frecuencia de repetición</a>, la cual determina el intervalo entre las distintas apariciones del evento. Es posible añadir información adicional para definir la programación con mayor precisión. 
+Esto incluye indicar los <a href="#https://schema.org/byDay">dias de la semana</a>  o el <a href="#https://schema.org/byMonth">mes</a> en los que tendrá lugar el evento recurrente, así como su <a href="#https://schema.org/startTime">hora de inicio</a> y <a href="#https://schema.org/endTime">hora de finalización</a>. Asimismo, las programaciones pueden incluir <a href="#https://schema.org/startDate">fecha de inicio</a> y <a href="#https://schema.org/endDate">fecha de fin</a> que señalan el periodo durante el cual permanecen activas.
+</p>
 <pre><textarea style="resize:none" readonly id="code2" name="code" rows="25" cols="100">
 &lt;https://example.org/recurso/city-event/madrid-deporte-50292978&gt;
     a edintagenda:CityEvent ;
     dct:identifier "50292978" ;
     rdfs:label "IV Cross escolar de Barajas"@es ;
-    schema:startDate "2026-05-22T00:00:00+02:00"^^xsd:dateTime ;
+    schema:startDate "2026-05-22T09:00:00+02:00"^^xsd:dateTime ;
     schema:endDate "2026-05-22T23:59:00+02:00"^^xsd:dateTime ;
     schema:isAccessibleForFree true ;
     schema:eventStatus edinteventstatus:Scheduled ;
     edintagenda:attendanceMode edintattendancemode:InPerson ;
     edintagenda:eventType edinteventtype:ActividadesDeportivas ;
-    edintagenda:schedule "09:00"@es ;
+    edintagenda:timetable "09:00"@es ;
     edintagenda:documentation &lt;https://example.org/recurso/documento-digital/madrid-deporte-50292978&gt; ;
     edintagenda:takesPlaceIn &lt;https://example.org/recurso/equipamiento/parque-juan-carlos-i&gt; ;
     edintagenda:organizedBy &lt;https://example.org/recurso/organizacion/ayuntamiento-madrid&gt; ;
