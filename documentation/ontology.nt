@@ -17,9 +17,10 @@ _:genid3 <http://xmlns.com/foaf/0.1/name> "Edna Ruckhaus" .
 <https://edint.es/def/agenda> <http://purl.org/dc/terms/creator> _:genid4 .
 _:genid4 <https://schema.org/affiliation> <https://oeg.fi.upm.es/> .
 _:genid4 <http://xmlns.com/foaf/0.1/name> "Daniel Doña" .
-<https://edint.es/def/agenda> <http://purl.org/dc/terms/description> "The Agenda ontology represents the agenda of cultural, sporting and social events that take place in the municipality."@es .
+<https://edint.es/def/agenda> <http://purl.org/dc/terms/description> "La ontología de Agenda representa la agenda de eventos culturales, deportivos y sociales que tienen lugar en el municipio."@es .
+<https://edint.es/def/agenda> <http://purl.org/dc/terms/description> "The Agenda ontology represents the agenda of cultural, sporting and social events that take place in the municipality."@en .
 <https://edint.es/def/agenda> <http://purl.org/dc/terms/issued> "2026-09-17"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://edint.es/def/agenda> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<https://edint.es/def/agenda> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by-sa/4.0/> .
 <https://edint.es/def/agenda> <http://purl.org/dc/terms/modified> "2026-09-17"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://edint.es/def/agenda> <http://purl.org/dc/terms/publisher> _:genid5 .
 _:genid5 <https://schema.org/affiliation> "Federación Española de Municipios y Provincias" .
@@ -28,7 +29,7 @@ _:genid5 <http://xmlns.com/foaf/0.1/homepage> <https://www.femp.es/> .
 <https://edint.es/def/agenda> <http://purl.org/dc/terms/title> "EDINT Event Agenda Ontology"@en .
 <https://edint.es/def/agenda> <http://purl.org/dc/terms/title> "Ontología EDINT de Agenda de Eventos"@es .
 <https://edint.es/def/agenda> <http://purl.org/vocab/vann/preferredNamespacePrefix> "edintagenda" .
-<https://edint.es/def/agenda> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://edint.es/def/agenda#> .
+<https://edint.es/def/agenda> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://edint.es/def/agenda#" .
 <https://edint.es/def/agenda> <http://www.w3.org/2000/01/rdf-schema#comment> "https://edint.es/def/agenda" .
 <https://edint.es/def/agenda> <http://www.w3.org/2000/01/rdf-schema#label> "Agenda de Eventos"@es .
 <https://edint.es/def/agenda> <http://www.w3.org/2000/01/rdf-schema#label> "Event Agenda"@en .

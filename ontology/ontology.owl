@@ -50,21 +50,14 @@
                 <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
             </rdf:Description>
         </dcterms:creator>
-        <dcterms:description xml:lang="es">The Agenda ontology represents the agenda of cultural, sporting and social events that take place in the municipality.</dcterms:description>
-        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-17</dcterms:issued>
-        <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-17</dcterms:modified>
-        <dcterms:publisher>
-            <rdf:Description>
-                <foaf:homepage rdf:resource="https://www.femp.es/"/>
-                <foaf:name>FEMP</foaf:name>
-                <schema:affiliation>Federación Española de Municipios y Provincias</schema:affiliation>
-            </rdf:Description>
-        </dcterms:publisher>
+        <dcterms:description xml:lang="es">La ontología de Agenda representa la agenda de eventos culturales, deportivos y sociales que tienen lugar en el municipio.</dcterms:description>
+        <dcterms:description xml:lang="en">The Agenda ontology represents the agenda of cultural, sporting and social events that take place in the municipality.</dcterms:description>
+        <dcterms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
+        <dcterms:title xml:lang="es">Ontología EDINT de Agenda de Eventos</dcterms:title>
         <dcterms:title xml:lang="en">EDINT Event Agenda Ontology</dcterms:title>
         <dcterms:title xml:lang="es">Ontología EDINT de Agenda de Eventos</dcterms:title>
         <vann:preferredNamespacePrefix>edintagenda</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri rdf:resource="https://edint.es/def/agenda#"/>
+        <vann:preferredNamespaceUri>https://edint.es/def/agenda#</vann:preferredNamespaceUri>
         <rdfs:comment>https://edint.es/def/agenda</rdfs:comment>
         <rdfs:label xml:lang="es">Agenda de Eventos</rdfs:label>
         <rdfs:label xml:lang="en">Event Agenda</rdfs:label>
@@ -73,39 +66,56 @@
         <schema:codeRepository rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-agenda"/>
         <schema:creativeWorkStatus xml:lang="en">Ontology Specification</schema:creativeWorkStatus>
         <schema:funding>Espacio de Datos para las Infraestructuras Urbanas Inteligentes (EDINT)</schema:funding>
-        <widoco:jsonldSerialization>ontology.jsonld</widoco:jsonldSerialization>
-        <widoco:ntSerialization>ontology.nt</widoco:ntSerialization>
+        <owl:versionInfo>0.1.1</owl:versionInfo>
+        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-05-05</dcterms:created>
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-17</dcterms:issued>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-17</dcterms:modified>
+        <dcterms:publisher rdf:parseType="Resource">
+            <foaf:name>FEMP</foaf:name>
+            <foaf:homepage rdf:resource="https://www.femp.es/"/>
+            <schema:affiliation>Federación Española de Municipios y Provincias</schema:affiliation>
+        </dcterms:publisher>
+    <dcterms:bibliographicCitation xml:lang="es">Ontología EDINT de Agenda de Eventos. EDINT. Revisión: v0.1.1.</dcterms:bibliographicCitation>
+    <dcterms:bibliographicCitation xml:lang="en">EDINT Event Agenda Ontology. EDINT. Revision: v0.1.1.</dcterms:bibliographicCitation>
+    <schema:creativeWorkStatus xml:lang="en">Ontology Specification</schema:creativeWorkStatus>
+    <dcterms:abstract xml:lang="es">El propósito de esta ontología es el de proporcionar un vocabulario común para la representación de todos los conceptos relacionados con la agenda de eventos culturales, deportivos y sociales de un municipio.</dcterms:abstract>
+    <dcterms:abstract xml:lang="en">El propósito de esta ontología es el de proporcionar un vocabulario común para la representación de todos los conceptos relacionados con la agenda de eventos culturales, deportivos y sociales de un municipio.</dcterms:abstract>
         <widoco:rdfxmlSerialization>ontology.rdf</widoco:rdfxmlSerialization>
         <widoco:turtleSerialization>ontology.ttl</widoco:turtleSerialization>
-        <widoco:vocabularyLabel>
+        <widoco:ntSerialization>ontology.nt</widoco:ntSerialization>
+        <widoco:jsonldSerialization>ontology.jsonld</widoco:jsonldSerialization>
+            <widoco:vocabularyLabel>
             <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"/>
                 <rdfs:label xml:lang="es">Territorio (esadm)</rdfs:label>
                 <rdfs:label xml:lang="en">Territory (esadm)</rdfs:label>
-                <widoco:vocabularyIRI rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"/>
             </rdf:Description>
         </widoco:vocabularyLabel>
         <widoco:vocabularyLabel>
             <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal"/>
                 <rdfs:label xml:lang="es">Dirección Postal (esdir)</rdfs:label>
                 <rdfs:label xml:lang="en">Postal Address (esdir)</rdfs:label>
-                <widoco:vocabularyIRI rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal"/>
             </rdf:Description>
         </widoco:vocabularyLabel>
         <widoco:vocabularyLabel>
             <rdf:Description>
-                <rdfs:label xml:lang="en">GeoSPARQL</rdfs:label>
-                <rdfs:label xml:lang="es">GeoSPARQL</rdfs:label>
                 <widoco:vocabularyIRI rdf:resource="http://www.opengis.net/ont/geosparql"/>
+                <rdfs:label xml:lang="es">GeoSPARQL</rdfs:label>
+                <rdfs:label xml:lang="en">GeoSPARQL</rdfs:label>
             </rdf:Description>
         </widoco:vocabularyLabel>
         <widoco:vocabularyLabel>
             <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="https://edint.es/def/infraestructura"/>
                 <rdfs:label xml:lang="es">Infraestructura (edintinf)</rdfs:label>
                 <rdfs:label xml:lang="en">Infrastructure (edintinf)</rdfs:label>
-                <widoco:vocabularyIRI rdf:resource="https://edint.es/def/infraestructura"/>
             </rdf:Description>
         </widoco:vocabularyLabel>
     </owl:Ontology>
+    <foaf:Organization rdf:about="https://oeg.fi.upm.es/">
+        <foaf:name>Ontology Engineering Group, UPM</foaf:name>
+    </foaf:Organization>
     
 
 
@@ -1354,6 +1364,7 @@ Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por
         <rdfs:label xml:lang="es">identificador</rdfs:label>
         <rdfs:label xml:lang="en">identifier</rdfs:label>
     </rdf:Description>
+    
 </rdf:RDF>
 
 
