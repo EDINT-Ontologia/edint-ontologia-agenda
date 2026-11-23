@@ -56,20 +56,26 @@ edinteventtype:Social
     skos:definition "Event aimed at citizen participation, coexistence, inclusion or community action."@en ;
     skos:definition "Evento orientado a la participación ciudadana, convivencia, inclusión o acción comunitaria."@es .
 
+edinteventtype:Commercial
+    a skos:Concept ;
+    skos:inScheme edintkos:EventType ;
+    skos:prefLabel "Commercial"@en ;
+    skos:prefLabel "Comercial"@es ;
+    skos:definition "Event related to commercial activities."@en ;
+    skos:definition "Evento relacionado con actividades comerciales."@es .
+
 edinteventtype:Concierto
     a skos:Concept ;
     skos:inScheme edintkos:EventType ;
     skos:prefLabel "Concert"@en ;
     skos:prefLabel "Concierto"@es ;
-    skos:notation "Concierto" ;
     skos:broader edinteventtype:Cultural .
 
-edinteventtype:Ferias
+edinteventtype:FeriaCultural
     a skos:Concept ;
     skos:inScheme edintkos:EventType ;
-    skos:prefLabel "Fairs"@en ;
-    skos:prefLabel "Ferias"@es ;
-    skos:notation "/contenido/actividades/Ferias" ;
+    skos:prefLabel "Cultural fair"@en ;
+    skos:prefLabel "Feria cultural"@es ;
     skos:broader edinteventtype:Cultural .
 
 edinteventtype:Exposicion
@@ -77,7 +83,6 @@ edinteventtype:Exposicion
     skos:inScheme edintkos:EventType ;
     skos:prefLabel "Exhibition"@en ;
     skos:prefLabel "Exposición"@es ;
-    skos:notation "Exposición" ;
     skos:broader edinteventtype:Cultural .
 
 edinteventtype:ActividadesDeportivas
@@ -85,7 +90,6 @@ edinteventtype:ActividadesDeportivas
     skos:inScheme edintkos:EventType ;
     skos:prefLabel "Sports activities"@en ;
     skos:prefLabel "Actividades deportivas"@es ;
-    skos:notation "/contenido/actividades/ActividadesDeportivas" ;
     skos:broader edinteventtype:Sports .
 
 edinteventtype:ArtesEscenicasSocial
@@ -93,5 +97,23 @@ edinteventtype:ArtesEscenicasSocial
     skos:inScheme edintkos:EventType ;
     skos:prefLabel "Performing arts with social purpose"@en ;
     skos:prefLabel "Artes escénicas de carácter social"@es ;
-    skos:notation "Artes escénicas" ;
     skos:broader edinteventtype:Cultural .
+
+edinteventtype:CommercialFair a skos:Concept ;
+    skos:inScheme edintkos:EventType ;
+    skos:broader edinteventtype:Commercial ;
+    skos:prefLabel "Feria comercial"@es ;
+    skos:prefLabel "Commercial fair"@en .
+
+edinteventtype:ThematicMarket a skos:Concept ;
+    skos:inScheme edintkos:EventType ;
+    skos:broader edinteventtype:Commercial ;
+    skos:prefLabel "Mercado temático"@es ;
+    skos:prefLabel "Thematic market"@en .
+
+edinteventtype:CommercialLocalEvent a skos:Concept ;
+  skos:inScheme edintkos:EventType ;
+  skos:broader edinteventtype:Commercial ;
+  skos:prefLabel "Evento local comercial"@es ;
+  skos:prefLabel "Local commercial event"@en  .
+

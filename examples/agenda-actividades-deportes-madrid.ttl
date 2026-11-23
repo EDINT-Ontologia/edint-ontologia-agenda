@@ -26,7 +26,7 @@
     schema:eventStatus edinteventstatus:Scheduled ;
     edintagenda:attendanceMode edintattendancemode:InPerson ;
     edintagenda:eventType edinteventtype:ActividadesDeportivas ;
-    edintagenda:schedule "09:00"@es ;
+    edintagenda:timetable "09:00"@es ;
     edintagenda:documentation <http://vocab.linkeddata.es/datosabiertos/recurso/documento-digital/madrid-deporte-50292978> ;
     edintagenda:takesPlaceIn <http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento/parque-juan-carlos-i> ;
     edintagenda:organizedBy <http://vocab.linkeddata.es/datosabiertos/recurso/organizacion/ayuntamiento-madrid> ;

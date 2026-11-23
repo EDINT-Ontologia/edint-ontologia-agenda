@@ -26,7 +26,7 @@
     schema:eventStatus edinteventstatus:Scheduled ;
     edintagenda:attendanceMode edintattendancemode:InPerson ;
     edintagenda:eventType edinteventtype:ArtesEscenicasSocial ;
-    edintagenda:schedule "19:00"@es ;
+    edintagenda:timetable "19:00"@es ;
     edintagenda:documentation <http://vocab.linkeddata.es/datosabiertos/recurso/documento-digital/gijon-40658> ;
     edintagenda:takesPlaceIn <http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento/centro-municipal-integrado-ateneo-de-la-calzada> ;
     edintagenda:organizedBy <http://vocab.linkeddata.es/datosabiertos/recurso/organizacion/ayuntamiento-gijon> ;

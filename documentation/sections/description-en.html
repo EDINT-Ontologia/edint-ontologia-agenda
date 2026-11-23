@@ -7,6 +7,9 @@ Figure 1. Conceptual model of the ontology</figcaption></center></p></span>
 
 The main concept of this vocabulary is that of <a href="#CityEvent">an event that takes place in a city</a>. The place where <a href="#takesPlaceIn">the event occurs</a> can be a <a href="#https://edint.es/def/infraestructura#Facility">city facility</a> such as the town hall, a cultural center, etc.</a> An event has an address that can be normalized using the properties of the class <a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal">esdir:DireccionPostal</a> . Additionally, this vocabulary uses several SKOS concept schemes to represent the type of event, the attendance modality (in-person, online, or hybrid), or the status of an event (scheduled, canceled, postponed, or rescheduled).
 </p>
+<p> For recurring events, the <a href="#https://schema.org/Schedule">Schedule</a> class and the <a href="#https://schema.org/eventSchedule">eventSchedule</a> property are used. In this way, an instance of the class defines a schedule—that is, a recurring time frame used to describe an event that takes place periodically. At a minimum, a schedule specifies a <a href="#https://schema.org/repeatFrequency">repeat frequency</a>, which determines the interval between the various occurrences of the event. Additional information can be added to define the schedule more precisely.
+This includes specifying the <a href="#https://schema.org/byDay">days of the week</a> or the <a href="#https://schema.org/byMonth">month</a> on which the recurring event takes place, as well as its <a href="#https://schema.org/startTime">start time</a> and <a href="#https://schema.org/endTime">end time</a>. Furthermore, schedules can include a <a href="#https://schema.org/startDate">start date</a> and an <a href="#https://schema.org/endDate">end date</a>, which indicate the period during which the schedule remains active.
+</p>
 
 <pre><textarea style="resize:none" readonly id="code2" name="code" rows="25" cols="100">
 &lt;http://vocab.linkeddata.es/datosabiertos/recurso/city-event/madrid-deporte-50292978&gt;
@@ -19,7 +22,7 @@ The main concept of this vocabulary is that of <a href="#CityEvent">an event tha
     schema:eventStatus edinteventstatus:Scheduled ;
     edintagenda:attendanceMode edintattendancemode:InPerson ;
     edintagenda:eventType edinteventtype:ActividadesDeportivas ;
-    edintagenda:schedule "09:00"@es ;
+    edintagenda:timetable "09:00"@es ;
     edintagenda:documentation &lt;http://vocab.linkeddata.es/datosabiertos/recurso/documento-digital/madrid-deporte-50292978&gt; ;
     edintagenda:takesPlaceIn &lt;http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento/parque-juan-carlos-i&gt; ;
     edintagenda:organizedBy &lt;http://vocab.linkeddata.es/datosabiertos/recurso/organizacion/ayuntamiento-madrid&gt; ;
