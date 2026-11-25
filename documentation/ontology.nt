@@ -179,6 +179,12 @@ _:genid9 <http://www.w3.org/2000/01/rdf-schema#label> "Territorio (esadm)"@es .
 # http://www.w3.org/2001/XMLSchema#date
 <http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
 # 
+# http://www.w3.org/2001/XMLSchema#duration
+<http://www.w3.org/2001/XMLSchema#duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# http://www.w3.org/2001/XMLSchema#time
+<http://www.w3.org/2001/XMLSchema#time> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
 # 
 # 
 # #################################################################
@@ -309,15 +315,6 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://edint.es/def/agenda#takesPlaceIn> <http://www.w3.org/2000/01/rdf-schema#label> "takes place in"@en .
 <https://edint.es/def/agenda#takesPlaceIn> <http://www.w3.org/2000/01/rdf-schema#label> "tiene lugar en"@es .
 # 
-# https://edint.es/def/agenda#workPerformed
-<https://edint.es/def/agenda#workPerformed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://edint.es/def/agenda#workPerformed> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/Event> .
-<https://edint.es/def/agenda#workPerformed> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.org/CreativeWork> .
-<https://edint.es/def/agenda#workPerformed> <http://www.w3.org/2000/01/rdf-schema#comment> "A work performed in some event, for example a play performed in a theater event."@en .
-<https://edint.es/def/agenda#workPerformed> <http://www.w3.org/2000/01/rdf-schema#comment> "Una obra representada en algún evento, por ejemplo, una obra de teatro representada en un evento teatral."@es .
-<https://edint.es/def/agenda#workPerformed> <http://www.w3.org/2000/01/rdf-schema#label> "obra presentada"@es .
-<https://edint.es/def/agenda#workPerformed> <http://www.w3.org/2000/01/rdf-schema#label> "work performed"@en .
-# 
 # https://schema.org/address
 <https://schema.org/address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://schema.org/address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
@@ -328,6 +325,19 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://schema.org/address> <http://www.w3.org/2000/01/rdf-schema#label> "address"@en .
 <https://schema.org/address> <http://www.w3.org/2000/01/rdf-schema#label> "dirección"@es .
 # 
+# https://schema.org/eventSchedule
+<https://schema.org/eventSchedule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.org/eventSchedule> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid20 .
+_:genid20 <http://www.w3.org/2002/07/owl#unionOf> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://schema.org/Event> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.org/eventSchedule> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.org/Schedule> .
+<https://schema.org/eventSchedule> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates an Event with a Schedule. There are circumstances where it is preferable to share a schedule for a series ofrepeating events rather than data on the individual events themselves. For example, a website or application might prefer to publish a schedule for a weekly gym class rather than provide data on every event. A schedule could be processed by applications to add forthcoming events to a calendar. An Event that is associated with a Schedule using this property should not have startDate or endDate properties. These are instead defined within the associated Schedule, this avoids any ambiguity for clients using the data. The property might have repeated values to specify different schedules, e.g. for different months or seasons."@en .
+<https://schema.org/eventSchedule> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://schema.org/> .
+<https://schema.org/eventSchedule> <http://www.w3.org/2000/01/rdf-schema#label> "eventSchedule"@en .
+# 
 # https://schema.org/subEvent
 <https://schema.org/subEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://schema.org/subEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
@@ -335,6 +345,7 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://schema.org/subEvent> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.org/Event> .
 <https://schema.org/subEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "An Event that is part of this event."@en .
 <https://schema.org/subEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "Un evento que forma parte de este evento."@es .
+<https://schema.org/subEvent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://schema.org/> .
 <https://schema.org/subEvent> <http://www.w3.org/2000/01/rdf-schema#label> "sub event"@en .
 <https://schema.org/subEvent> <http://www.w3.org/2000/01/rdf-schema#label> "sub evento"@es .
 # 
@@ -345,8 +356,19 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://schema.org/superEvent> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.org/Event> .
 <https://schema.org/superEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "An event that this event is a part of."@en .
 <https://schema.org/superEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "Un acontecimiento del que forma parte este evento."@es .
+<https://schema.org/superEvent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://schema.org/> .
 <https://schema.org/superEvent> <http://www.w3.org/2000/01/rdf-schema#label> "super event"@en .
 <https://schema.org/superEvent> <http://www.w3.org/2000/01/rdf-schema#label> "super evento"@es .
+# 
+# https://schema.org/workPerformed
+<https://schema.org/workPerformed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.org/workPerformed> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/Event> .
+<https://schema.org/workPerformed> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.org/CreativeWork> .
+<https://schema.org/workPerformed> <http://www.w3.org/2000/01/rdf-schema#comment> "A work performed in some event, for example a play performed in a theater event."@en .
+<https://schema.org/workPerformed> <http://www.w3.org/2000/01/rdf-schema#comment> "Una obra representada en algún evento, por ejemplo, una obra de teatro representada en un evento teatral."@es .
+<https://schema.org/workPerformed> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://schema.org/> .
+<https://schema.org/workPerformed> <http://www.w3.org/2000/01/rdf-schema#label> "obra presentada"@es .
+<https://schema.org/workPerformed> <http://www.w3.org/2000/01/rdf-schema#label> "work performed"@en .
 # 
 # 
 # 
@@ -380,14 +402,12 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://edint.es/def/agenda#price> <http://www.w3.org/2000/01/rdf-schema#label> "precio"@es .
 <https://edint.es/def/agenda#price> <http://www.w3.org/2000/01/rdf-schema#label> "price" .
 # 
-# https://edint.es/def/agenda#schedule
-<https://edint.es/def/agenda#schedule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://edint.es/def/agenda#schedule> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/agenda#CityEvent> .
-<https://edint.es/def/agenda#schedule> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://edint.es/def/agenda#schedule> <http://www.w3.org/2000/01/rdf-schema#comment> "El cronograma de un evento que especifica  el horario de cada día."@es .
-<https://edint.es/def/agenda#schedule> <http://www.w3.org/2000/01/rdf-schema#comment> "The schedule of an event scpecifying the hours each day."@en .
-<https://edint.es/def/agenda#schedule> <http://www.w3.org/2000/01/rdf-schema#label> "horario"@es .
-<https://edint.es/def/agenda#schedule> <http://www.w3.org/2000/01/rdf-schema#label> "schedule"@en .
+# https://edint.es/def/aparcamiento#timetable
+<https://edint.es/def/aparcamiento#timetable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://edint.es/def/aparcamiento#timetable> <http://www.w3.org/2000/01/rdf-schema#comment> "El calendario de un evento que especifica el horario de cada día."@es .
+<https://edint.es/def/aparcamiento#timetable> <http://www.w3.org/2000/01/rdf-schema#comment> "The timetable of an event specifying the hours each day."@en .
+<https://edint.es/def/aparcamiento#timetable> <http://www.w3.org/2000/01/rdf-schema#label> "calendario"@es .
+<https://edint.es/def/aparcamiento#timetable> <http://www.w3.org/2000/01/rdf-schema#label> "timetable"@en .
 # 
 # https://schema.org/audience
 <https://schema.org/audience> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -396,8 +416,41 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://schema.org/audience> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://schema.org/audience> <http://www.w3.org/2000/01/rdf-schema#comment> "El público al que va dirigido el artículo, es decir, el grupo para el que se creó el artículo."@es .
 <https://schema.org/audience> <http://www.w3.org/2000/01/rdf-schema#comment> "Intended audience for an item, i.e. the group for whom the item was created."@en .
+<https://schema.org/audience> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.org/> .
 <https://schema.org/audience> <http://www.w3.org/2000/01/rdf-schema#label> "audience"@en .
 <https://schema.org/audience> <http://www.w3.org/2000/01/rdf-schema#label> "audiencia"@es .
+# 
+# https://schema.org/byDay
+<https://schema.org/byDay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.org/byDay> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/Schedule> .
+<https://schema.org/byDay> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.org/byDay> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the day(s) of the week on which a recurring Event takes place. May be specified using either DayOfWeek, or alternatively Text conforming to iCal's syntax for byDay recurrence rules."@en .
+<https://schema.org/byDay> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.org/> .
+<https://schema.org/byDay> <http://www.w3.org/2000/01/rdf-schema#label> "by day"@en .
+# 
+# https://schema.org/byMonth
+<https://schema.org/byMonth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.org/byMonth> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/Schedule> .
+<https://schema.org/byMonth> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://schema.org/byMonth> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the month(s) of the year on which a recurring Event takes place. Specified as an Integer between 1-12. January is 1."@en .
+<https://schema.org/byMonth> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.org/> .
+<https://schema.org/byMonth> <http://www.w3.org/2000/01/rdf-schema#label> "byMonth"@en .
+# 
+# https://schema.org/byMonthDay
+<https://schema.org/byMonthDay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.org/byMonthDay> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/Schedule> .
+<https://schema.org/byMonthDay> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://schema.org/byMonthDay> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the day(s) of the month on which a recurring Event takes place. Specified as an Integer between 1-31."@en .
+<https://schema.org/byMonthDay> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://schema.org/> .
+<https://schema.org/byMonthDay> <http://www.w3.org/2000/01/rdf-schema#label> "byMonthDay"@en .
+# 
+# https://schema.org/byMonthWeek
+<https://schema.org/byMonthWeek> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.org/byMonthWeek> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/Schedule> .
+<https://schema.org/byMonthWeek> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://schema.org/byMonthWeek> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the week(s) of the month on which a recurring Event takes place. Specified as an Integer between 1-5. For clarity, byMonthWeek is best used in conjunction with byDay to indicate concepts like the first and third Mondays of a month."@en .
+<https://schema.org/byMonthWeek> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://schema.org/> .
+<https://schema.org/byMonthWeek> <http://www.w3.org/2000/01/rdf-schema#label> "byMonthWeek"@en .
 # 
 # https://schema.org/description
 <https://schema.org/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -405,6 +458,7 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://schema.org/description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://schema.org/description> <http://www.w3.org/2000/01/rdf-schema#comment> "A description of the item."@en .
 <https://schema.org/description> <http://www.w3.org/2000/01/rdf-schema#comment> "Una descripción del artículo."@es .
+<https://schema.org/description> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.org/> .
 <https://schema.org/description> <http://www.w3.org/2000/01/rdf-schema#label> "descripción"@es .
 <https://schema.org/description> <http://www.w3.org/2000/01/rdf-schema#label> "description"@en .
 # 
@@ -415,6 +469,7 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://schema.org/doorTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://schema.org/doorTime> <http://www.w3.org/2000/01/rdf-schema#comment> "La hora de inicio de la admisión."@es .
 <https://schema.org/doorTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The time admission will commence."@en .
+<https://schema.org/doorTime> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.org/> .
 <https://schema.org/doorTime> <http://www.w3.org/2000/01/rdf-schema#label> "hora de apertura"@es .
 <https://schema.org/doorTime> <http://www.w3.org/2000/01/rdf-schema#label> "opening time"@en .
 # 
@@ -425,18 +480,36 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://schema.org/encodingFormat> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://schema.org/encodingFormat> <http://www.w3.org/2000/01/rdf-schema#comment> "File format type"@en .
 <https://schema.org/encodingFormat> <http://www.w3.org/2000/01/rdf-schema#comment> "Tipo del formato del archivo"@es .
+<https://schema.org/encodingFormat> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.org/> .
 <https://schema.org/encodingFormat> <http://www.w3.org/2000/01/rdf-schema#label> "file format"@en .
 <https://schema.org/encodingFormat> <http://www.w3.org/2000/01/rdf-schema#label> "formato archivo"@es .
 # 
 # https://schema.org/endDate
 <https://schema.org/endDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://schema.org/endDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
-<https://schema.org/endDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/Event> .
+<https://schema.org/endDate> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid22 .
+_:genid22 <http://www.w3.org/2002/07/owl#unionOf> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://schema.org/Schedule> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://schema.org/Event> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://schema.org/endDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://schema.org/endDate> <http://www.w3.org/2000/01/rdf-schema#comment> "La fecha y hora de finalización del artículo"@es .
+<https://schema.org/endDate> <http://www.w3.org/2000/01/rdf-schema#comment> "La fecha y hora de finalización del ente"@es .
 <https://schema.org/endDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The end date and time of the item"@en .
-<https://schema.org/endDate> <http://www.w3.org/2000/01/rdf-schema#label> "end date"@en .
+<https://schema.org/endDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.org/> .
+<https://schema.org/endDate> <http://www.w3.org/2000/01/rdf-schema#label> "endDate"@en .
 <https://schema.org/endDate> <http://www.w3.org/2000/01/rdf-schema#label> "fecha fin"@es .
+# 
+# https://schema.org/endTime
+<https://schema.org/endTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.org/endTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/Schedule> .
+<https://schema.org/endTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#time> .
+<https://schema.org/endTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. E.g. John wrote a book from January to December. For media, including audio and video, it's the time offset of the end of a clip within a larger file.\n\nNote that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions."@en .
+<https://schema.org/endTime> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://schema.org/> .
+<https://schema.org/endTime> <http://www.w3.org/2000/01/rdf-schema#label> "endTime"@en .
 # 
 # https://schema.org/eventStatus
 <https://schema.org/eventStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -445,8 +518,25 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://schema.org/eventStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://schema.org/eventStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "An eventStatus of an event represents its status; particularly useful when an event is cancelled or rescheduled."@en .
 <https://schema.org/eventStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "El estado de un evento representa su situación; especialmente útil cuando un evento se cancela o se reprograma."@es .
+<https://schema.org/eventStatus> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.org/> .
 <https://schema.org/eventStatus> <http://www.w3.org/2000/01/rdf-schema#label> "estado del evento"@es .
 <https://schema.org/eventStatus> <http://www.w3.org/2000/01/rdf-schema#label> "event status"@en .
+# 
+# https://schema.org/exceptDate
+<https://schema.org/exceptDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.org/exceptDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/Schedule> .
+<https://schema.org/exceptDate> <http://www.w3.org/2000/01/rdf-schema#range> _:genid25 .
+_:genid25 <http://www.w3.org/2002/07/owl#unionOf> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2001/XMLSchema#dateTime> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2001/XMLSchema#date> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<https://schema.org/exceptDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines a Date or DateTime during which a scheduled Event will not take place. The property allows exceptions to a Schedule to be specified. If an exception is specified as a DateTime then only the event that would have started at that specific date and time should be excluded from the schedule. If an exception is specified as a Date then any event that is scheduled for that 24 hour period should be excluded from the schedule. This allows a whole day to be excluded from the schedule without having to itemise every scheduled event."@en .
+<https://schema.org/exceptDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.org/> .
+<https://schema.org/exceptDate> <http://www.w3.org/2000/01/rdf-schema#label> "exceptDate"@en .
 # 
 # https://schema.org/image
 <https://schema.org/image> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -454,16 +544,18 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://schema.org/image> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
 <https://schema.org/image> <http://www.w3.org/2000/01/rdf-schema#comment> "An image of the item."@en .
 <https://schema.org/image> <http://www.w3.org/2000/01/rdf-schema#comment> "Una imagen del artículo."@es .
+<https://schema.org/image> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.org/> .
 <https://schema.org/image> <http://www.w3.org/2000/01/rdf-schema#label> "image"@en .
 <https://schema.org/image> <http://www.w3.org/2000/01/rdf-schema#label> "imagen"@es .
 # 
 # https://schema.org/isAccessibleForFree
 <https://schema.org/isAccessibleForFree> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://schema.org/isAccessibleForFree> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
-<https://schema.org/isAccessibleForFree> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/agenda#CityEvent> .
+<https://schema.org/isAccessibleForFree> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/Event> .
 <https://schema.org/isAccessibleForFree> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
 <https://schema.org/isAccessibleForFree> <http://www.w3.org/2000/01/rdf-schema#comment> "A flag to signal that the item, event, or place is accessible for free."@en .
 <https://schema.org/isAccessibleForFree> <http://www.w3.org/2000/01/rdf-schema#comment> "Una bandera para señalar que el artículo, evento o lugar es accesible de forma gratuita."@es .
+<https://schema.org/isAccessibleForFree> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.org/> .
 <https://schema.org/isAccessibleForFree> <http://www.w3.org/2000/01/rdf-schema#label> "es accesible gratis"@es .
 <https://schema.org/isAccessibleForFree> <http://www.w3.org/2000/01/rdf-schema#label> "is accessible free"@en .
 # 
@@ -474,6 +566,7 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://schema.org/maximumAttendeeCapacity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
 <https://schema.org/maximumAttendeeCapacity> <http://www.w3.org/2000/01/rdf-schema#comment> "El número total de personas que pueden asistir a un evento o local."@es .
 <https://schema.org/maximumAttendeeCapacity> <http://www.w3.org/2000/01/rdf-schema#comment> "The total number of individuals that may attend an event or venue."@en .
+<https://schema.org/maximumAttendeeCapacity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.org/> .
 <https://schema.org/maximumAttendeeCapacity> <http://www.w3.org/2000/01/rdf-schema#label> "capacidad máxima"@es .
 <https://schema.org/maximumAttendeeCapacity> <http://www.w3.org/2000/01/rdf-schema#label> "maximun attendee capacity"@en .
 # 
@@ -483,17 +576,59 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://schema.org/name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://schema.org/name> <http://www.w3.org/2000/01/rdf-schema#comment> "El nombre de un elemento"@es .
 <https://schema.org/name> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of the item."@en .
+<https://schema.org/name> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.org/> .
 <https://schema.org/name> <http://www.w3.org/2000/01/rdf-schema#label> "name" .
+# 
+# https://schema.org/repeatCount
+<https://schema.org/repeatCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.org/repeatCount> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/Schedule> .
+<https://schema.org/repeatCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://schema.org/repeatCount> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the number of times a recurring Even will take place."@en .
+<https://schema.org/repeatCount> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://schema.org/> .
+<https://schema.org/repeatCount> <http://www.w3.org/2000/01/rdf-schema#label> "repeatCount"@en .
+# 
+# https://schema.org/repeatFrequency
+<https://schema.org/repeatFrequency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.org/repeatFrequency> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/Schedule> .
+<https://schema.org/repeatFrequency> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#duration> .
+<https://schema.org/repeatFrequency> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the frequency at which Events will occur according to a schedule. The intervals between events should be defined as a Duration of time."@en .
+<https://schema.org/repeatFrequency> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.org/> .
+<https://schema.org/repeatFrequency> <http://www.w3.org/2000/01/rdf-schema#label> "repeat frequency"@en .
+# 
+# https://schema.org/scheduleTimezone
+<https://schema.org/scheduleTimezone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.org/scheduleTimezone> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/Schedule> .
+<https://schema.org/scheduleTimezone> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.org/scheduleTimezone> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the timezone for which the time(s) indicated in the Schedule are given. The value provided should be among those listed in the IANA Time Zone Database."@en .
+<https://schema.org/scheduleTimezone> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.org/> .
+<https://schema.org/scheduleTimezone> <http://www.w3.org/2000/01/rdf-schema#label> "schedule timezone"@en .
 # 
 # https://schema.org/startDate
 <https://schema.org/startDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://schema.org/startDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
-<https://schema.org/startDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/Event> .
+<https://schema.org/startDate> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid28 .
+_:genid28 <http://www.w3.org/2002/07/owl#unionOf> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://schema.org/Schedule> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://schema.org/Event> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://schema.org/startDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://schema.org/startDate> <http://www.w3.org/2000/01/rdf-schema#comment> "La fecha y la hora de inicio del artículo"@es .
+<https://schema.org/startDate> <http://www.w3.org/2000/01/rdf-schema#comment> "La fecha y la hora de inicio de la entidad."@es .
 <https://schema.org/startDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The start date and time of the item"@en .
+<https://schema.org/startDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://schema.org/> .
 <https://schema.org/startDate> <http://www.w3.org/2000/01/rdf-schema#label> "fecha inicio"@es .
 <https://schema.org/startDate> <http://www.w3.org/2000/01/rdf-schema#label> "start date"@en .
+# 
+# https://schema.org/startTime
+<https://schema.org/startTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.org/startTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/Schedule> .
+<https://schema.org/startTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#time> .
+<https://schema.org/startTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. E.g. John wrote a book from January to December. For media, including audio and video, it's the time offset of the start of a clip within a larger file.\n\nNote that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions."@en .
+<https://schema.org/startTime> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://schema.org/> .
+<https://schema.org/startTime> <http://www.w3.org/2000/01/rdf-schema#label> "startTime"@en .
 # 
 # https://schema.org/typicalAgeRange
 <https://schema.org/typicalAgeRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -655,6 +790,9 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "A set of concepts, optionally including statements about semantic relationships between those concepts."@en .
 <http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/2000/01/rdf-schema#label> "Concept Scheme"@en .
 # 
+# http://xmlns.com/foaf/0.1/Organization
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
 # https://edint.es/def/agenda#CityEvent
 <https://edint.es/def/agenda#CityEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://edint.es/def/agenda#CityEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#Feature> .
@@ -691,6 +829,22 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://schema.org/Event> <http://www.w3.org/2000/01/rdf-schema#comment> "Un evento que tiene lugar a una hora y en un lugar determinados, como un concierto, una conferencia o un festival."@es .
 <https://schema.org/Event> <http://www.w3.org/2000/01/rdf-schema#label> "Event" .
 # 
+# https://schema.org/Intangible
+<https://schema.org/Intangible> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://schema.org/Schedule
+<https://schema.org/Schedule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.org/Schedule> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/Intangible> .
+<https://schema.org/Schedule> <http://www.w3.org/2000/01/rdf-schema#comment> "A schedule defines a repeating time period used to describe a regularly occurring Event. At a minimum a schedule will specify repeatFrequency which describes the interval between occurrences of the event. Additional information can be provided to specify the schedule more precisely.\n      This includes identifying the day(s) of the week or month when the recurring event will take place, in addition to its start and end time. Schedules may also have start and end dates to indicate when they are active, e.g. to define a limited calendar of events."@en .
+<https://schema.org/Schedule> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://schema.org/Schedule> .
+<https://schema.org/Schedule> <http://www.w3.org/2000/01/rdf-schema#label> "Schedule"@en .
+# 
+# https://schema.org/Text
+<https://schema.org/Text> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://schema.org/URL
+<https://schema.org/URL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
 # 
 # 
 # #################################################################
@@ -712,6 +866,10 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://edint.es/kos/EventType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://edint.es/kos/EventType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
 # 
+# https://oeg.fi.upm.es/
+<https://oeg.fi.upm.es/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://oeg.fi.upm.es/> <http://xmlns.com/foaf/0.1/name> "Ontology Engineering Group, UPM" .
+# 
 # 
 # 
 # #################################################################
@@ -726,7 +884,5 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
 <http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#label> "identificador"@es .
 <http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#label> "identifier"@en .
-# 
-<https://oeg.fi.upm.es/> <http://xmlns.com/foaf/0.1/name> "Ontology Engineering Group, UPM" .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
