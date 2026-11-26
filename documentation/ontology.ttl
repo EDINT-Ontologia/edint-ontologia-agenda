@@ -221,6 +221,14 @@ _:genid9 rdfs:label "Territorio (esadm)"@es ,
 xsd:date rdf:type rdfs:Datatype .
 
 
+###  http://www.w3.org/2001/XMLSchema#duration
+xsd:duration rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#time
+xsd:time rdf:type rdfs:Datatype .
+
+
 #################################################################
 #    Object Properties
 #################################################################
@@ -346,16 +354,6 @@ xsd:date rdf:type rdfs:Datatype .
                          "tiene lugar en"@es .
 
 
-###  https://edint.es/def/agenda#workPerformed
-:workPerformed rdf:type owl:ObjectProperty ;
-               rdfs:domain <https://schema.org/Event> ;
-               rdfs:range <https://schema.org/CreativeWork> ;
-               rdfs:comment "A work performed in some event, for example a play performed in a theater event."@en ,
-                            "Una obra representada en algún evento, por ejemplo, una obra de teatro representada en un evento teatral."@es ;
-               rdfs:label "obra presentada"@es ,
-                          "work performed"@en .
-
-
 ###  https://schema.org/address
 <https://schema.org/address> rdf:type owl:ObjectProperty ,
                                       owl:FunctionalProperty ;
@@ -367,6 +365,18 @@ xsd:date rdf:type rdfs:Datatype .
                                         "dirección"@es .
 
 
+###  https://schema.org/eventSchedule
+<https://schema.org/eventSchedule> rdf:type owl:ObjectProperty ;
+                                   rdfs:domain [ rdf:type owl:Class ;
+                                                 owl:unionOf ( <https://schema.org/Event>
+                                                             )
+                                               ] ;
+                                   rdfs:range <https://schema.org/Schedule> ;
+                                   rdfs:comment "Associates an Event with a Schedule. There are circumstances where it is preferable to share a schedule for a series ofrepeating events rather than data on the individual events themselves. For example, a website or application might prefer to publish a schedule for a weekly gym class rather than provide data on every event. A schedule could be processed by applications to add forthcoming events to a calendar. An Event that is associated with a Schedule using this property should not have startDate or endDate properties. These are instead defined within the associated Schedule, this avoids any ambiguity for clients using the data. The property might have repeated values to specify different schedules, e.g. for different months or seasons."@en ;
+                                   rdfs:isDefinedBy <https://schema.org/> ;
+                                   rdfs:label "eventSchedule"@en .
+
+
 ###  https://schema.org/subEvent
 <https://schema.org/subEvent> rdf:type owl:ObjectProperty ,
                                        owl:FunctionalProperty ;
@@ -374,6 +384,7 @@ xsd:date rdf:type rdfs:Datatype .
                               rdfs:range <https://schema.org/Event> ;
                               rdfs:comment "An Event that is part of this event."@en ,
                                            "Un evento que forma parte de este evento."@es ;
+                              rdfs:isDefinedBy <https://schema.org/> ;
                               rdfs:label "sub event"@en ,
                                          "sub evento"@es .
 
@@ -385,8 +396,20 @@ xsd:date rdf:type rdfs:Datatype .
                                 rdfs:range <https://schema.org/Event> ;
                                 rdfs:comment "An event that this event is a part of."@en ,
                                              "Un acontecimiento del que forma parte este evento."@es ;
+                                rdfs:isDefinedBy <https://schema.org/> ;
                                 rdfs:label "super event"@en ,
                                            "super evento"@es .
+
+
+###  https://schema.org/workPerformed
+<https://schema.org/workPerformed> rdf:type owl:ObjectProperty ;
+                                   rdfs:domain <https://schema.org/Event> ;
+                                   rdfs:range <https://schema.org/CreativeWork> ;
+                                   rdfs:comment "A work performed in some event, for example a play performed in a theater event."@en ,
+                                                "Una obra representada en algún evento, por ejemplo, una obra de teatro representada en un evento teatral."@es ;
+                                   rdfs:isDefinedBy <https://schema.org/> ;
+                                   rdfs:label "obra presentada"@es ,
+                                              "work performed"@en .
 
 
 #################################################################
@@ -419,14 +442,12 @@ xsd:date rdf:type rdfs:Datatype .
                   "price" .
 
 
-###  https://edint.es/def/agenda#schedule
-:schedule rdf:type owl:DatatypeProperty ;
-          rdfs:domain :CityEvent ;
-          rdfs:range xsd:string ;
-          rdfs:comment "El cronograma de un evento que especifica  el horario de cada día."@es ,
-                       "The schedule of an event scpecifying the hours each day."@en ;
-          rdfs:label "horario"@es ,
-                     "schedule"@en .
+###  https://edint.es/def/aparcamiento#timetable
+<https://edint.es/def/aparcamiento#timetable> rdf:type owl:DatatypeProperty ;
+                                              rdfs:comment "El calendario de un evento que especifica el horario de cada día."@es ,
+                                                           "The timetable of an event specifying the hours each day."@en ;
+                                              rdfs:label "calendario"@es ,
+                                                         "timetable"@en .
 
 
 ###  https://schema.org/audience
@@ -436,8 +457,45 @@ xsd:date rdf:type rdfs:Datatype .
                               rdfs:range xsd:string ;
                               rdfs:comment "El público al que va dirigido el artículo, es decir, el grupo para el que se creó el artículo."@es ,
                                            "Intended audience for an item, i.e. the group for whom the item was created."@en ;
+                              rdfs:isDefinedBy <http://schema.org/> ;
                               rdfs:label "audience"@en ,
                                          "audiencia"@es .
+
+
+###  https://schema.org/byDay
+<https://schema.org/byDay> rdf:type owl:DatatypeProperty ;
+                           rdfs:domain <https://schema.org/Schedule> ;
+                           rdfs:range xsd:string ;
+                           rdfs:comment "Defines the day(s) of the week on which a recurring Event takes place. May be specified using either DayOfWeek, or alternatively Text conforming to iCal's syntax for byDay recurrence rules."@en ;
+                           rdfs:isDefinedBy <http://schema.org/> ;
+                           rdfs:label "by day"@en .
+
+
+###  https://schema.org/byMonth
+<https://schema.org/byMonth> rdf:type owl:DatatypeProperty ;
+                             rdfs:domain <https://schema.org/Schedule> ;
+                             rdfs:range xsd:integer ;
+                             rdfs:comment "Defines the month(s) of the year on which a recurring Event takes place. Specified as an Integer between 1-12. January is 1."@en ;
+                             rdfs:isDefinedBy <http://schema.org/> ;
+                             rdfs:label "byMonth"@en .
+
+
+###  https://schema.org/byMonthDay
+<https://schema.org/byMonthDay> rdf:type owl:DatatypeProperty ;
+                                rdfs:domain <https://schema.org/Schedule> ;
+                                rdfs:range xsd:integer ;
+                                rdfs:comment "Defines the day(s) of the month on which a recurring Event takes place. Specified as an Integer between 1-31."@en ;
+                                rdfs:isDefinedBy <https://schema.org/> ;
+                                rdfs:label "byMonthDay"@en .
+
+
+###  https://schema.org/byMonthWeek
+<https://schema.org/byMonthWeek> rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain <https://schema.org/Schedule> ;
+                                 rdfs:range xsd:integer ;
+                                 rdfs:comment "Defines the week(s) of the month on which a recurring Event takes place. Specified as an Integer between 1-5. For clarity, byMonthWeek is best used in conjunction with byDay to indicate concepts like the first and third Mondays of a month."@en ;
+                                 rdfs:isDefinedBy <https://schema.org/> ;
+                                 rdfs:label "byMonthWeek"@en .
 
 
 ###  https://schema.org/description
@@ -446,6 +504,7 @@ xsd:date rdf:type rdfs:Datatype .
                                  rdfs:range xsd:string ;
                                  rdfs:comment "A description of the item."@en ,
                                               "Una descripción del artículo."@es ;
+                                 rdfs:isDefinedBy <http://schema.org/> ;
                                  rdfs:label "descripción"@es ,
                                             "description"@en .
 
@@ -457,6 +516,7 @@ xsd:date rdf:type rdfs:Datatype .
                               rdfs:range xsd:dateTime ;
                               rdfs:comment "La hora de inicio de la admisión."@es ,
                                            "The time admission will commence."@en ;
+                              rdfs:isDefinedBy <http://schema.org/> ;
                               rdfs:label "hora de apertura"@es ,
                                          "opening time"@en .
 
@@ -468,6 +528,7 @@ xsd:date rdf:type rdfs:Datatype .
                                     rdfs:range xsd:string ;
                                     rdfs:comment "File format type"@en ,
                                                  "Tipo del formato del archivo"@es ;
+                                    rdfs:isDefinedBy <http://schema.org/> ;
                                     rdfs:label "file format"@en ,
                                                "formato archivo"@es .
 
@@ -475,12 +536,28 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://schema.org/endDate
 <https://schema.org/endDate> rdf:type owl:DatatypeProperty ,
                                       owl:FunctionalProperty ;
-                             rdfs:domain <https://schema.org/Event> ;
+                             rdfs:domain [ rdf:type owl:Class ;
+                                           owl:unionOf ( <https://schema.org/Event>
+                                                         <https://schema.org/Schedule>
+                                                       )
+                                         ] ;
                              rdfs:range xsd:dateTime ;
-                             rdfs:comment "La fecha y hora de finalización del artículo"@es ,
+                             rdfs:comment "La fecha y hora de finalización del ente"@es ,
                                           "The end date and time of the item"@en ;
-                             rdfs:label "end date"@en ,
+                             rdfs:isDefinedBy <http://schema.org/> ;
+                             rdfs:label "endDate"@en ,
                                         "fecha fin"@es .
+
+
+###  https://schema.org/endTime
+<https://schema.org/endTime> rdf:type owl:DatatypeProperty ;
+                             rdfs:domain <https://schema.org/Schedule> ;
+                             rdfs:range xsd:time ;
+                             rdfs:comment """The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. E.g. John wrote a book from January to December. For media, including audio and video, it's the time offset of the end of a clip within a larger file.
+
+Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions."""@en ;
+                             rdfs:isDefinedBy <https://schema.org/> ;
+                             rdfs:label "endTime"@en .
 
 
 ###  https://schema.org/eventStatus
@@ -490,8 +567,22 @@ xsd:date rdf:type rdfs:Datatype .
                                  rdfs:range xsd:string ;
                                  rdfs:comment "An eventStatus of an event represents its status; particularly useful when an event is cancelled or rescheduled."@en ,
                                               "El estado de un evento representa su situación; especialmente útil cuando un evento se cancela o se reprograma."@es ;
+                                 rdfs:isDefinedBy <http://schema.org/> ;
                                  rdfs:label "estado del evento"@es ,
                                             "event status"@en .
+
+
+###  https://schema.org/exceptDate
+<https://schema.org/exceptDate> rdf:type owl:DatatypeProperty ;
+                                rdfs:domain <https://schema.org/Schedule> ;
+                                rdfs:range [ rdf:type rdfs:Datatype ;
+                                             owl:unionOf ( xsd:date
+                                                           xsd:dateTime
+                                                         )
+                                           ] ;
+                                rdfs:comment "Defines a Date or DateTime during which a scheduled Event will not take place. The property allows exceptions to a Schedule to be specified. If an exception is specified as a DateTime then only the event that would have started at that specific date and time should be excluded from the schedule. If an exception is specified as a Date then any event that is scheduled for that 24 hour period should be excluded from the schedule. This allows a whole day to be excluded from the schedule without having to itemise every scheduled event."@en ;
+                                rdfs:isDefinedBy <http://schema.org/> ;
+                                rdfs:label "exceptDate"@en .
 
 
 ###  https://schema.org/image
@@ -500,6 +591,7 @@ xsd:date rdf:type rdfs:Datatype .
                            rdfs:range xsd:anyURI ;
                            rdfs:comment "An image of the item."@en ,
                                         "Una imagen del artículo."@es ;
+                           rdfs:isDefinedBy <http://schema.org/> ;
                            rdfs:label "image"@en ,
                                       "imagen"@es .
 
@@ -507,10 +599,11 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://schema.org/isAccessibleForFree
 <https://schema.org/isAccessibleForFree> rdf:type owl:DatatypeProperty ,
                                                   owl:FunctionalProperty ;
-                                         rdfs:domain :CityEvent ;
+                                         rdfs:domain <https://schema.org/Event> ;
                                          rdfs:range xsd:boolean ;
                                          rdfs:comment "A flag to signal that the item, event, or place is accessible for free."@en ,
                                                       "Una bandera para señalar que el artículo, evento o lugar es accesible de forma gratuita."@es ;
+                                         rdfs:isDefinedBy <http://schema.org/> ;
                                          rdfs:label "es accesible gratis"@es ,
                                                     "is accessible free"@en .
 
@@ -522,6 +615,7 @@ xsd:date rdf:type rdfs:Datatype .
                                              rdfs:range xsd:integer ;
                                              rdfs:comment "El número total de personas que pueden asistir a un evento o local."@es ,
                                                           "The total number of individuals that may attend an event or venue."@en ;
+                                             rdfs:isDefinedBy <http://schema.org/> ;
                                              rdfs:label "capacidad máxima"@es ,
                                                         "maximun attendee capacity"@en .
 
@@ -532,18 +626,62 @@ xsd:date rdf:type rdfs:Datatype .
                           rdfs:range xsd:string ;
                           rdfs:comment "El nombre de un elemento"@es ,
                                        "The name of the item."@en ;
+                          rdfs:isDefinedBy <http://schema.org/> ;
                           rdfs:label "name" .
+
+
+###  https://schema.org/repeatCount
+<https://schema.org/repeatCount> rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain <https://schema.org/Schedule> ;
+                                 rdfs:range xsd:integer ;
+                                 rdfs:comment "Defines the number of times a recurring Even will take place."@en ;
+                                 rdfs:isDefinedBy <https://schema.org/> ;
+                                 rdfs:label "repeatCount"@en .
+
+
+###  https://schema.org/repeatFrequency
+<https://schema.org/repeatFrequency> rdf:type owl:DatatypeProperty ;
+                                     rdfs:domain <https://schema.org/Schedule> ;
+                                     rdfs:range xsd:duration ;
+                                     rdfs:comment "Defines the frequency at which Events will occur according to a schedule. The intervals between events should be defined as a Duration of time."@en ;
+                                     rdfs:isDefinedBy <http://schema.org/> ;
+                                     rdfs:label "repeat frequency"@en .
+
+
+###  https://schema.org/scheduleTimezone
+<https://schema.org/scheduleTimezone> rdf:type owl:DatatypeProperty ;
+                                      rdfs:domain <https://schema.org/Schedule> ;
+                                      rdfs:range xsd:string ;
+                                      rdfs:comment "Indicates the timezone for which the time(s) indicated in the Schedule are given. The value provided should be among those listed in the IANA Time Zone Database."@en ;
+                                      rdfs:isDefinedBy <http://schema.org/> ;
+                                      rdfs:label "schedule timezone"@en .
 
 
 ###  https://schema.org/startDate
 <https://schema.org/startDate> rdf:type owl:DatatypeProperty ,
                                         owl:FunctionalProperty ;
-                               rdfs:domain <https://schema.org/Event> ;
+                               rdfs:domain [ rdf:type owl:Class ;
+                                             owl:unionOf ( <https://schema.org/Event>
+                                                           <https://schema.org/Schedule>
+                                                         )
+                                           ] ;
                                rdfs:range xsd:dateTime ;
-                               rdfs:comment "La fecha y la hora de inicio del artículo"@es ,
+                               rdfs:comment "La fecha y la hora de inicio de la entidad."@es ,
                                             "The start date and time of the item"@en ;
+                               rdfs:isDefinedBy <https://schema.org/> ;
                                rdfs:label "fecha inicio"@es ,
                                           "start date"@en .
+
+
+###  https://schema.org/startTime
+<https://schema.org/startTime> rdf:type owl:DatatypeProperty ;
+                               rdfs:domain <https://schema.org/Schedule> ;
+                               rdfs:range xsd:time ;
+                               rdfs:comment """The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. E.g. John wrote a book from January to December. For media, including audio and video, it's the time offset of the start of a clip within a larger file.
+
+Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions."""@en ;
+                               rdfs:isDefinedBy <https://schema.org/> ;
+                               rdfs:label "startTime"@en .
 
 
 ###  https://schema.org/typicalAgeRange
@@ -732,6 +870,10 @@ Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por
                                                     rdfs:label "Concept Scheme"@en .
 
 
+###  http://xmlns.com/foaf/0.1/Organization
+<http://xmlns.com/foaf/0.1/Organization> rdf:type owl:Class .
+
+
 ###  https://edint.es/def/agenda#CityEvent
 :CityEvent rdf:type owl:Class ;
            rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Feature> ,
@@ -773,6 +915,27 @@ Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por
                            rdfs:label "Event" .
 
 
+###  https://schema.org/Intangible
+<https://schema.org/Intangible> rdf:type owl:Class .
+
+
+###  https://schema.org/Schedule
+<https://schema.org/Schedule> rdf:type owl:Class ;
+                              rdfs:subClassOf <https://schema.org/Intangible> ;
+                              rdfs:comment """A schedule defines a repeating time period used to describe a regularly occurring Event. At a minimum a schedule will specify repeatFrequency which describes the interval between occurrences of the event. Additional information can be provided to specify the schedule more precisely.
+      This includes identifying the day(s) of the week or month when the recurring event will take place, in addition to its start and end time. Schedules may also have start and end dates to indicate when they are active, e.g. to define a limited calendar of events."""@en ;
+                              rdfs:isDefinedBy <https://schema.org/Schedule> ;
+                              rdfs:label "Schedule"@en .
+
+
+###  https://schema.org/Text
+<https://schema.org/Text> rdf:type owl:Class .
+
+
+###  https://schema.org/URL
+<https://schema.org/URL> rdf:type owl:Class .
+
+
 #################################################################
 #    Individuals
 #################################################################
@@ -792,6 +955,11 @@ Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por
                                           <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
 
 
+###  https://oeg.fi.upm.es/
+<https://oeg.fi.upm.es/> rdf:type owl:NamedIndividual ;
+                         <http://xmlns.com/foaf/0.1/name> "Ontology Engineering Group, UPM" .
+
+
 #################################################################
 #    Annotations
 #################################################################
@@ -801,9 +969,6 @@ Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por
                                       rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
                                       rdfs:label "identificador"@es ,
                                                  "identifier"@en .
-
-
-<https://oeg.fi.upm.es/> <http://xmlns.com/foaf/0.1/name> "Ontology Engineering Group, UPM" .
 
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
